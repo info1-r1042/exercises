@@ -29,81 +29,53 @@ Escribir una función que incremente en uno (1) el valor de una variable entera 
 void incrementar(int* numero);
 ```
 
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
+**Importante:** Validar que no se reciben punteros **`NULL`**. En dicho caso, la función retornará sin efectuar operación alguna.
 
 ## Ejercicio 4.2
-Escribir una función llamada swap que reciba dos datos llamados `a` y `b` por referencia e intercambie su contenido, de forma tal que `b` pase a tener el contenido que originalmente tenía `a` y viceversa. Utilizar el siguiente prototipo:
+Escribir una función llamada swap que reciba dos datos llamados **`a`** y **`b`** por referencia e intercambie su contenido, de forma tal que **`b`** pase a tener el contenido que originalmente tenía **`a`** y viceversa. Utilizar el siguiente prototipo:
 
 ```c
 void swap(int* a, int* b);
 ```
 
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
+**Importante:** Validar que no se reciben punteros **`NULL`**. En dicho caso, la función retornará sin efectuar operación alguna.
 
 ## Ejercicio 4.3
-Escribir una función que sume dos números enteros y almacene el resultado de la operación en una variable pasada por referencia. Utilizar el siguiente prototipo:
-
-```c
-void sumar(int x, int y, int* resultado);
-```
-
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
-
-## Ejercicio 4.4
-Escribir una función que reste dos números enteros (`x` menos `y` en este caso) y almacene el resultado de la operación en una variable pasada por referencia. Utilizar el siguiente prototipo:
-
-```c
-void restar(int x, int y, int* resultado);
-```
-
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
-
-## Ejercicio 4.5
-Escribir una función que multiplique dos números enteros y almacene el resultado de la operación en una variable pasada por referencia. Utilizar el siguiente prototipo:
-
-```c
-void multiplicar(int x, int y, int* resultado);
-```
-
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
-
-## Ejercicio 4.6
-Escribir una función que divida dos números enteros (`x` dividido `y` en este caso) y almacene el resultado de la operación en una variable pasada por referencia. En caso de error (división por cero), la función deberá retornar `ERROR_DIVISION_POR_CERO` (-1). En caso de éxito, la función deberá retornar `EXITO` (0). Utilizar el siguiente prototipo:
-
-```c
-int dividir(int x, int y, int* resultado);
-```
-
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
-
-## Ejercicio 4.7
-Escribir una función que compute el resto de la división de dos números enteros (`x` dividido `y` en este caso) y almacene el resultado de la operación en una variable pasada por referencia. En caso de error (división por cero), la función deberá retornar `ERROR_DIVISION_POR_CERO` (-1). En caso de éxito, la función deberá retornar `EXITO` (0). Utilizar el siguiente prototipo:
-
-```c
-int modulo(int x, int y, int* resultado);
-```
-
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
-
-## Ejercicio 4.8
 Escribir una función que compute el promedio de dos números enteros y almacene el resultado de la operación en una variable pasada por referencia. Utilizar el siguiente prototipo:
 
 ```c
 void promedio(int x, int y, float* resultado);
 ```
 
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
+**Importante:** Validar que no se reciben punteros **`NULL`**. En dicho caso, la función retornará sin efectuar operación alguna.
 
-## Ejercicio 4.9
+## Ejercicio 4.4
+Escribir una función que reciba dos números enteros y una operación a realizar entre ellos. Las operaciones soportadas son:
+
+- Suma (`'+'`)
+- Resta (`'-'`)
+- Multiplicación (`'*'`)
+- División (`'/'`)
+- Módulo (`'%'`)
+
+Finalmente, deberá almacenar el resultado de la operación en una variable pasada por referencia. En caso de error por operación inválida, la función deberá retornar `ERROR_OPERACION_INVALIDA` (-2). En caso de error por división por cero, la función deberá retornar `ERROR_DIVISION_POR_CERO` (-1). En caso de éxito, la función deberá retornar `EXITO` (0). Utilizar el siguiente prototipo:
+
+```c
+int calculadora(int x, int y, char operacion, int* resultado);
+```
+
+**Importante:** Validar que no se reciben punteros **`NULL`**. En dicho caso, la función retornará sin efectuar operación alguna.
+
+## Ejercicio 4.5
 Escribir una función que convierta un número que representa una cantidad total de segundos, a su equivalente en horas, minutos y segundos, retornando dichos valores en variables pasadas por referencia. Utilizar el siguiente prototipo:
 
 ```c
 void a_sexagesimal(int total_segundos, int* horas, int* minutos, int* segundos);
 ```
 
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
+**Importante:** Validar que no se reciben punteros **`NULL`**. En dicho caso, la función retornará sin efectuar operación alguna.
 
-## Ejercicio 4.10
+## Ejercicio 4.6
 Implementar la siguiente función:
 
 ```c
@@ -114,9 +86,9 @@ Dicha función recibirá dos números enteros por referencia (`min` y `max`). La
 
 La función debe devolver `CORRECTO` (0) si los números estaban bien ubicados o `INCORRECTO` (-1) en caso contrario. 
 
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
+**Importante:** Validar que no se reciben punteros **`NULL`**. En dicho caso, la función retornará sin efectuar operación alguna.
 
-## Ejercicio 4.11
+## Ejercicio 4.7
 Escribir una función que reciba un número entero pasado por referencia y muestre cómo se almacena en memoria. Primero lo mostrará como un entero en formato decimal y en formato hexadecimal y luego mostrará las posiciones de memoria byte a byte y el valor que hay almacenado en formato hexadecimal. Utilizar el siguiente prototipo:
 
 ```c
@@ -137,4 +109,4 @@ Dirección                 Valor Hexadecimal
 0x7ffe4dd88dc7:           00
 ```
 
-**Importante:** Validar que no se reciben punteros `NULL`. En dicho caso, la función retornará sin efectuar operación alguna.
+**Importante:** Validar que no se reciben punteros **`NULL`**. En dicho caso, la función retornará sin efectuar operación alguna.
