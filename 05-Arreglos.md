@@ -118,7 +118,7 @@ Los ordenes soportados son:
 Dado que una operación entre un vector y un escalar da como resultado otro vector, el resultado de la operación se almacenará en un arreglo de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
-int computar_arreglo_escalar(double* vector, int largo, double escalar, char operacion, double* resultado);
+int computar_arreglo_escalar(const double* vector, int largo, double escalar, char operacion, double* resultado);
 ```
 
 ## Ejercicio 5.11
@@ -133,7 +133,7 @@ Las operaciones soportadas (todas elemento a elemento) son:
 Dado que una operación (elemento a elemento) entre dos vectores da como resultado otro vector, el resultado de la operación se almacenará en un arreglo de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
-int computar_arreglo_arreglo(double* vector_a, double* vector_b, int largo, char operacion, double* resultado);
+int computar_arreglo_arreglo(const double* vector_a, const double* vector_b, int largo, char operacion, double* resultado);
 ```
 
 ## Ejercicio 5.12
@@ -232,252 +232,128 @@ Escribir un programa que genere una tabla con muestras de un polinomio ingresado
 void muestrear_polinomio(const double* coeficientes, int grado, double inicio, double fin, double* muestras, int cantidad_muestras);
 ```
 
+## Ejercicio 5.17
+El [filtro de media móvil](https://es.wikipedia.org/wiki/Media_m%C3%B3vil) es un filtro digital ampliamente utilizado porque es intuitivo, fácil de implementar y rápido de calcular. En dicho filtro, se toman los últimos **`N`** valores muestreados (conocido como "ventana de muestreo") y se calcula su valor medio (promedio). El resultado es una señal suavizada que elimina parte del ruido de alta frecuencia (variaciones rápidas entre muestras cercanas). Un caso de uso de dicho filtro es para la remoción de ruido (denoising) de una señal de electrocardiografía (ECG):
 
+![ECG](images/ecg.png)
 
+Se pide implementar dicho filtro teniendo en cuenta lo siguiente:
+- Se utilizará el arreglo como un buffer circular. Eso quiere decir que la nueva muestra que se agrega se debe colocar en el lugar indicado por **`indice`** y luego se debe incrementar dicha variable en uno (1). En caso de que se haya alcanzado el final del arreglo, **`indice`** debe volver a cero (0). 
+- La función deberá retornar la nueva muestra filtrada, la cual se obtiene del promedio de los valores presentes en la ventana. 
 
+Utilizar el siguiente prototipo:
 
+```c
+double filtro_media_movil(double* ventana, int* indice, int largo, double muestra);
+```
 
+## Ejercicio 5.18
+Implementar una función que permita efectuar operaciones entre una matriz y un escalar. Dicha función recibirá un arreglo multidimensional de números reales, un número real, la operación a realizar entre ellos y el orden de los operandos.
 
+Las operaciones soportadas son:
+- Suma (`'+'`)
+- Resta (`'-'`)
+- Multiplicación (`'*'`)
+- División (`'/'`)
 
+Los ordenes soportados son:
+- `ESCALAR_MATRIZ` (0)
+- `MATRIZ_ESCALAR` (1)
 
+Dado que una operación entre una matriz y un escalar da como resultado otra matriz, el resultado de la operación se almacenará en una matriz de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
 
+```c
+int computar_matriz_escalar(const double* matriz, int filas, int columnas, double escalar, char operacion, double* resultado);
+```
 
-Ejercicio 6.47.
-Entrega Obligatoria
-Una matriz de nxm elementos es simétrica, si y solo si:
- es una matriz cuadrada (m = n), y
- a ij = a ji para todo i, j =1,2,3,4,...,n.
-donde a ij representa el elemento que está en la fila i-ésima y en la columna j-
+## Ejercicio 5.19
+Implementar una función que permita efectuar operaciones entre dos matrices. Dicha función recibirá dos arreglo de números reales y la operación a realizar entre ellas.
+
+Las operaciones soportadas (todas elemento a elemento) son:
+- Suma (`'+'`)
+- Resta (`'-'`)
+- Multiplicación (`'*'`)
+- División (`'/'`)
+
+Dado que una operación (elemento a elemento) entre dos matrices da como resultado otra matriz, el resultado de la operación se almacenará en una matriz de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
+
+```c
+int computar_matriz_matriz(const double* matriz_a, const double* matriz_b, int filas, int columnas, char operacion, double* resultado);
+```
+
+## Ejercicio 5.20
+Una matriz de `NxM` elementos es simétrica, si y solo si:
+- Es una matriz cuadrada (m = n)
+- a_ij = a_ji para todo i, j = 1, 2, 3, 4, ..., n.
+
+Donde a_ij representa el elemento que está en la fila i-ésima y en la columna j-
 ésima de A.
-En base a lo anterior, escribir una función que reciba una matriz cuadrada de
-enteros y su dimensión, y determine si es una matriz simétrica retornando el
-resultado mediante una variable booleana.
 
+En base a lo anterior, implementar una función que reciba una matriz cuadrada de
+enteros y su dimensión, y retorne **`1`** si es una matriz simétrica y **`0`** si no lo es. Utilizar el siguiente prototipo:
 
-Ejercicio 6.48.
-Entrega Obligatoria
-En Álgebra Lineal, la traza de una matriz cuadrada de nxn se define como la
-suma de los elementos de su diagonal principal.
-Es decir, t (A)=a 11 + a 22 + a 33 + ... + a nn .
-En base a lo anterior escribir una función que reciba una matriz cuadrada de
-doubles y su dimensión, y retorne el valor de su traza.
+```c
+int es_simetrica(const int* matriz, int dimension);
+```
 
+## Ejercicio 5.21
+La traza de una matriz cuadrada de `NxM` elementos se define como la suma de los elementos de su diagonal principal. Es decir, **`t(A) = a_11 + a_22 + a_33 + ... + a_nn`**.
 
-Ejercicio 6.49.
-Entrega Obligatoria
-Escribir una función que reciba una matriz cuadrada de doubles y su dimensión,
-y retorne el valor de su determinante.
+En base a lo anterior, implementar una función que reciba una matriz cuadrada de
+doubles y su dimensión, y retorne el valor de su traza. Utilizar el siguiente prototipo:
 
-Ejercicio 6.50.
-Escribir una función que recibe como argumentos una matriz de enteros de N x
-M, y los enteros N y M, y obtenga la transpuesta de dicha matriz.
+```c
+double traza(const double* matriz, int dimension);
+```
 
+## Ejercicio 5.21
+Implementar una función que reciba una matriz cuadrada de doubles de dimensión 3 y compute el valor de su determinante. Utilizar el siguiente prototipo:
 
-Ejercicio 6.51.
-Entrega Obligatoria
-Escribir una función que reciba dos matrices de dimensiones NxM y MxP, y cuatro
-enteros dando filas y columnas de cada matriz, y realice el producto de las dos
-matrices, devolviendo un puntero a la matriz resultado, y chequeando si las
-dimensiones de ambas matrices permiten efectuar el producto de las mismas.
+```c
+double determinante(const double* matriz);
+```
 
+## Ejercicio 5.22
+Implementar una función que reciba una matriz de enteros de `NxM` elementos, y compute la transpuesta de dicha matriz. Utilizar el siguiente prototipo:
 
-Ejercicio 6.52.
-Escribir un programa que recibe como argumento un arreglo bidimensional de
-números enteros, y dos enteros que definen sus dimensiones, y devuelva un
-entero que represente el máximo valor contenido en el mismo.
+```c
+void transpuesta(const double* matriz, int filas, int columnas, double* matriz_transpuesta);
+```
 
+## Ejercicio 5.23
+Implementar una función que reciba una matriz cuadrada de doubles de dimensión 3, y
+compute su matriz inversa. En caso de poder calcularse deberá retornar **`EXITO`** (0) y en caso de no poder hacerlo, **`ERROR`** (-1). Utilizar el siguiente prototipo:
 
+```c
+int inversa(const double* matriz, double* matriz_inversa);
+```
 
+## Ejercicio 5.24
+Implementar una función que reciba dos matrices de dimensiones `NxM` y `MxP`, y compute el producto de las dos matrices. En caso de poder calcularse deberá retornar **`EXITO`** (0) y en caso de no poder hacerlo, **`ERROR`** (-1). Utilizar el siguiente prototipo:
 
+```c
+int producto_matricial(const double* matriz_a, int filas_a, int columnas_a, const double* matriz_b, int filas_b, int columnas_b, double* matriz_resultado, int* filas, int* columnas);
+```
 
+## Ejercicio 5.25
+El [tatetí](https://es.wikipedia.org/wiki/Tres_en_l%C3%ADnea) es un juego de lápiz y papel entre dos jugadores: **`O`** y **`X`**, que marcan los espacios de un tablero de 3×3 alternadamente.
 
+Para una versión electrónica del mismo, una empresa de videojuegos nos pide que desarrollemos las siguientes funciones:
 
+a) Implementar una función que marque el tablero en la posición indicada con el símbolo del jugar indicado (**`'O'`** o **`'X'`**). En caso de no poder marcarse dicha casilla (ya sea porque no se encuentra dentro de los límites del tablero o porque ya se encuentra marcada previamente) se deberá retornar **`ERROR`** (-1). En caso contrario se deberá retornar **`EXITO`** (0). Utilizar el siguiente prototipo:
 
+```c
+int marcar_tablero(const char* tablero, int fila, int columna, char jugador);
+```
 
+b) Implementar una función que compruebe si el juego ha terminado. Los posibles desenlaces del mismo son:
+- `JUEGO_EN_CURSO`(0)
+- `GANA_JUGADOR_X`(1)
+- `GANA_JUGADOR_O`(2)
+- `EMPATE`(3)
 
+Utilizar el siguiente prototipo:
 
-
-Enunciado 3:
-a) Implementar una función que reciba una matriz cuadrada de doubles de dimensión 3 y
-retorne el valor de su determinante.
-
-double calcular_determinante(double m[3][3]);
-
-b) Implementar una función que reciba una matriz cuadrada de doubles de dimensión 3 y
-retorne el valor de su matriz inversa. En caso de poder calcularse deberá retornar (tipo
-enumerativo) EXITO y en caso de no poder hacerlo, deberá retornar ERROR.
-int calcular_matriz_inversa(double m_original[3][3], double m_inversa[3][3]);
-
-Enunciado 4:
-Implementar una función que compruebe si una solución dada a un Sudoku es correcta sabiendo
-que:
-a) Un tablero Sudoku se compone de 81 casillas, 9 filas por
-9 columnas. A su vez el tablero se subdivide en 9
-subcuadrados de 9 casillas cada uno (3x3).
-b) Se deben completar todas las casillas con un número
-comprendido entre el 1 y el 9.
-c) No puede repetirse ninguna cifra en la misma fila, ni en la
-misma columna ni en el mismo subcuadrado.
-int comprobar_sudoku(int tablero[9][9]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Funciones con arreglos multidimensionales
-
-  
-
-    Escriba un programa que inicialice una matriz de 
-
-filas y
-
-columnas con:
-
-    ceros,
-
-    unos,
-
-    los números del 1 al 
-
-    ,
-
-    números indicados por el usuario a través del teclado,
-
-    números aleatorios,
-
-    la sucesión de fibonacci,
-
-y la muestre por pantalla.
-
-Para cada uno de los casos anteriores, implemente una función que reciba y cargue la matriz con los valores adecuados.
-
-(programas con matrices) Para cada inciso escriba un programa que lo resuelva, o escriba un programa que resuelva todos:
-
-    cargue una matriz 
-
-y calcule su traza (suma de los elementos de la diagonal principal),
-
-cargue una matriz
-
-y número y modifique la matriz sumando a cada componente el número recibido,
-
-cargue una matriz
-
-y número y modifique la matriz mulplicando a cada componente por el número recibido,
-
-cargue una matriz
-y modifique dicha matriz cambiándola por su transpuesta o lea otra matriz con las dimensiones adecuadas y la cargue con la transpuesta de
-
-,
-
-cargue una matriz
-
-e indique si la misma es positiva, no-negativa, negativa o no-positiva. Una matriz es positiva (no-negativa) si cumple que todos sus elementos son mayores (mayores o iguales) que cero. Una matriz es negativa (no-positiva) si cumple que todos sus elementos son menores (menores o iguales) que cero. Por ejemplo:
-
-es positiva (
-
-),
-
-es no negativa (
-
-),
-
-es negativa (
-
-),
-
-es no positiva (
-
-),
-
-        no cumple ninguna de las condiciones.
-
-sólo para matrices de
-ó
-
-: calcule el determinante,
-
-dadas 2 matrices
-y , calcule el producto almacenando el resultado en una tercera matriz
-
-        ,
-
-        retorne el máximo elemento de la matriz,
-
-        retorne el máximo de la suma, en valores absolutos, de los elementos de cada columna (norma-1 matricial),
-
-        retorne el máximo de la suma, en valores absolutos, de los elementos de cada fila (norma-infinito matricial).
-
-        Tómese un descanso.
-
-    (funciones con matrices) Repita el ejercicio anterior, pero utilizando funciones. Agregue el siguiente inciso:
-
-        Tómese dos descansos.
-
-Gráficos Net PBM
-
-El formato Net PBM [inglés] [español] es un formato de imágenes muy sencillo. Básicamente, una imagen Net PBM es un archivo de texto que sigue el siguiente formato:
-
-P1
-ANCHO ALTO
-SECUENCIA de 0s y 1s
-
-Por ejemplo
-
-P1
-20 7
-00000000000000000000
-01110011100110001100
-01010010000010000100
-01010011000010000100
-01110000100010000100
-00010000100010000100
-01110011100111001110
-
-que da como resultado (ampliado 10 veces):
-NetPBM 9511 x 10
-
-    Escriba una función que reciba una matriz, con un ancho máximo de 1050 columnas aunque lo utilizado puede ser menor, e imprima por pantalla el contenido de un archivo Net PBM. Por ejemplo, dada una matriz canvas definida como: uchar canvas[1680][1050]; cargada con los datos del ejemplo anterior, imprima lo que se ve en el ejemplo anterior. Prototipo:
-
-    bool canvas2pbm(uchar canvas??, size_t w, size_t h);
-
-    Escriba una función que reciba una matriz y dibuje sobre ella el contenido de otra matriz, en la posición indicada a través de un par de argumentos. Prototipo:
-
-    bool
-    pbmpaste(uchar canvas??,    /* matriz de 1680x1050         */
-             size_t w,          /* ancho del canvas            */
-             size_t h,          /* alto del canvas             */
-             const uchar img??, /* imagen a pegar              */
-             size_t iw,         /* ancho de la imagen          */
-             size_t ih,         /* alto de la imagen           */
-             size_t x,          /* eje x donde pegar la imagen */
-             size_t y           /* eje y donde pegar la imagen */
-             );
-
-    Escriba una función que reciba una matriz y dibuje sobre ella una línea, recibiendo las coordenadas de inicio y fin como argumentos. Prototipo:
-
-    bool draw_line(uchar canvas??, size_t w, size_t h, size_t x1, size_t y1, size_t x2, size_t y2);
-
-    Escriba una función que reciba una matriz y dibuje sobre ella un cuadrado de lado 
-
-, en la posición
-
-. Para dibujar, debe poner unos en las posiciones requeridas.
-
-Escriba una función que reciba una matriz y dibuje sobre ella una circunferencia de radio
-, en la posición
-
-    .
-
-
+```c
+int comprobar_tablero(const char* tablero);
+```
