@@ -16,64 +16,52 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 | Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
 | Bibliotecas específicas (.a)    |   |
 
-<br>
-
 Se deben entregar los tres ejercicios en un zip (usar template como ayuda para el formato).
 
-<br>
-
 **Importante:** Recordar validar **siempre** que no se reciben punteros **`NULL`**. En dicho caso, la función deberá retornar sin efectuar operación alguna y en caso de tener que retornar algún valor devolverá el valor `-1`.
+
+<br>
 
 ## Ejercicios 5.1 - 5.5
 Desarrolle un programa que solicite el ingreso de las calificaciones (como número enteros) del primer parcial de los estudiantes de Informática 1. El ingreso de calificaciones finalizará cuando se ingrese un once (11). Tener en cuenta que las calificaciones deberán ser números comprendidos entre 0 y 10 (0 significa ausente), por lo que se debe validar la carga de datos. Se podrán ingresar como máximo 25 calificaciones. Una vez finalizada la carga de datos, se pide computar e imprimir en pantalla las siguientes estadísticas:
 
 ### Ejercicio 5.1
-- La cantidad de aprobados, desaprobados y ausentes (nota de aprobación: 6).
-
-Utilizar el siguiente prototipo:
+- La cantidad de aprobados, desaprobados y ausentes (nota de aprobación: 6). Utilizar el siguiente prototipo:
 
 ```c
-void computar_estatus(const int* calificaciones, int cantidad, int* aprobados, int* desaprobados, int* ausentes);
+void clasificar_calificaciones(const int* calificaciones, int cantidad, int* aprobados, int* desaprobados, int* ausentes);
 ```
 
 ### Ejercicio 5.2
-- El valor medio (promedio) de las calificaciones (teniendo en cuenta los ausentes).
-
-Utilizar el siguiente prototipo:
+- El valor medio (promedio) de las calificaciones (teniendo en cuenta los ausentes). Utilizar el siguiente prototipo:
 
 ```c
 float promedio_con_ausentes(const int* calificaciones, int cantidad);
 ```
 
 ### Ejercicio 5.3
-- El valor medio (promedio) de las calificaciones (sin tener en cuenta los ausentes).
-
-Utilizar el siguiente prototipo:
+- El valor medio (promedio) de las calificaciones (sin tener en cuenta los ausentes). Utilizar el siguiente prototipo:
 
 ```c
 float promedio_sin_ausentes(const int* calificaciones, int cantidad);
 ```
 
 ### Ejercicio 5.4
-- La calificación máxima ingresada y su ubicación.
-
-Utilizar el siguiente prototipo:
+- La calificación máxima ingresada y su ubicación (retornada por valor). Utilizar el siguiente prototipo:
 
 ```c
 int calificacion_maxima(const int* calificaciones, int cantidad, int* maximo);
 ```
 
 ### Ejercicio 5.5
-- La calificación mínima ingresada y su ubicación.
-
-Utilizar el siguiente prototipo:
+- La calificación mínima ingresada y su ubicación (retornada por valor). Utilizar el siguiente prototipo:
 
 ```c
 int calificacion_minima(const int* calificaciones, int cantidad, int* minimo);
 ```
 
 ## Ejercicio 5.6
-Implementar una función que reciba dos arreglos y sus longitudes, y copie el contenido del arreglo origen en el arreglo destino. La función deberá retornar la cantidad de **bytes** copiados. Utilizar el siguiente prototipo:
+Implementar una función que reciba dos arreglos y sus longitudes, y copie el contenido del arreglo origen en el arreglo destino. La función deberá retornar la cantidad de **bytes** copiados. Recordar corroborar que el tamaño del arreglo destino es suficiente para efectuar la copia. Utilizar el siguiente prototipo:
 
 ```c
 int arrcpy(float* arreglo_destino, int largo_destino, const float* arreglo_origen, int largo_origen);
@@ -139,11 +127,9 @@ int computar_arreglo_arreglo(const double* vector_a, const double* vector_b, int
 ## Ejercicio 5.12
 El producto escalar (o producto interno) es una operación entre vectores muy utilizada en juegos FPS (first-person shooter), tales como [Doom](https://es.wikipedia.org/wiki/Doom_(videojuego_de_1993)):
 
-![Doom](images/doom.jpeg)
+![Doom](images/doom.jpg)
 
-Esto se debe a que a través de dicha operación es posible obtener fácilmente el ángulo entre dos vectores, y por lo tanto, saber si el jugador está apuntando a un enemigo al momento de disparar lo cual podría ocasionar, por ejemplo, la destrucción de dicho enemigo.
-
-Esto se debe a que el producto escalar se puede computar de dos formas distintas:
+Esto se debe a que a través de dicha operación es posible obtener fácilmente el ángulo entre dos vectores, y por lo tanto, saber si el jugador está apuntando a un enemigo al momento de disparar lo cual podría ocasionar, por ejemplo, la destrucción de dicho enemigo. El secreto radica en que el producto escalar se puede computar de dos formas distintas:
 
 **Ecuación 1:**
 
@@ -162,7 +148,7 @@ Para poder lograr lo anterior, una empresa de videojuegos nos pide que desarroll
 a) Implementar una función que compute el producto escalar de dos vectores de **dimensión 3**, utilizando la ecuación 2. Utilizar el siguiente prototipo:
 
 ```c
-double producto_escalar(const double* vector_a, const double* vector_b);
+double producto_escalar_vec3(const double* vector_a, const double* vector_b);
 ```
 
 b) Implementar una función que compute la norma de un vector de **dimensión 3**, la cual es requerida por la ecuación 1 y se calcula de la siguiente manera:
@@ -174,13 +160,13 @@ b) Implementar una función que compute la norma de un vector de **dimensión 3*
 Utilizar el siguiente prototipo:
 
 ```c
-double norma(const double* vector);
+double norma_vec3(const double* vector);
 ```
 
 c) Implementar una función que compute el ángulo de separación (en radianes) entre dos vectores, a partir de la ecuación 1 y haciendo uso de las funciones ya desarrolladas en los puntos **`a)`** y **`b)`**. Utilizar el siguiente prototipo:
 
 ```c
-double angulo_entre_vectores(const double* vector_a, const double* vector_b);
+double angulo_entre_vec3(const double* vector_a, const double* vector_b);
 ```
 
 d) Implementar una sencilla función que compruebe si un enemigo está siendo apuntado por el jugador, lo cual se puede deducir comprobando si el ángulo entre el vector del enemigo y el vector de la mira del jugador es menor que un cierto valor límite. Se deberá devolver **`1`** en caso que sea cierto y **`0`** en caso contrario. Hacer uso de las funciones ya desarrolladas en los puntos **`a)`**, **`b)`** y **`c)`**. Utilizar el siguiente prototipo:
@@ -190,7 +176,7 @@ int esta_apuntando_al_enemigo(const double* vector_mira, const double* vector_en
 ```
 
 ## Ejercicio 5.13
-La derivada nos da información acerca de la razón de cambio de una función y en el caso de la derivada discreta, nos información sobre dicha razón de cambio pero aplicado a un conjunto de elementos númericos discretos. En este ejercicio, se pide implementar una función que calcule la derivada discreta (por diferencias finitas) del contenido de un vector de enteros. El cálculo de dicha derivada discreta se realiza de la siguiente manera:
+La derivada nos da información acerca de la razón de cambio de una función y en el caso de la derivada discreta, nos da información sobre dicha razón de cambio pero aplicado a un conjunto de elementos númericos discretos. En este ejercicio, se pide implementar una función que calcule la derivada discreta (por diferencias finitas) del contenido de un vector de enteros. El cálculo de dicha derivada discreta se realiza de la siguiente manera:
 ```
 Para x = 0 => (∂f/∂x)[x] = 0
 Para x > 0 => (∂f/∂x)[x] = F[x] − F[x − 1]
@@ -233,7 +219,7 @@ void muestrear_polinomio(const double* coeficientes, int grado, double inicio, d
 ```
 
 ## Ejercicio 5.17
-El [filtro de media móvil](https://es.wikipedia.org/wiki/Media_m%C3%B3vil) es un filtro digital ampliamente utilizado porque es intuitivo, fácil de implementar y rápido de calcular. En dicho filtro, se toman los últimos **`N`** valores muestreados (conocido como "ventana de muestreo") y se calcula su valor medio (promedio). El resultado es una señal suavizada que elimina parte del ruido de alta frecuencia (variaciones rápidas entre muestras cercanas). Un caso de uso de dicho filtro es para la remoción de ruido (denoising) de una señal de electrocardiografía (ECG):
+El [filtro de media móvil](https://es.wikipedia.org/wiki/Media_m%C3%B3vil) es un filtro digital ampliamente utilizado porque es intuitivo, fácil de implementar y rápido de calcular. En dicho filtro, se toman los últimos **`N`** valores muestreados (conocido como "ventana de muestreo") y se calcula su valor medio (promedio). El resultado es una señal suavizada que elimina parte del ruido de alta frecuencia (variaciones rápidas entre muestras cercanas). Un caso de uso de dicho filtro es para la eliminación de ruido (denoising) de una señal de electrocardiografía (ECG):
 
 ![ECG](images/ecg.png)
 
@@ -306,36 +292,40 @@ doubles y su dimensión, y retorne el valor de su traza. Utilizar el siguiente p
 double traza(const double* matriz, int dimension);
 ```
 
-## Ejercicio 5.21
+## Ejercicio 5.22
 Implementar una función que reciba una matriz cuadrada de doubles de dimensión 3 y compute el valor de su determinante. Utilizar el siguiente prototipo:
 
 ```c
-double determinante(const double* matriz);
+double determinante_mat3(const double* matriz);
 ```
 
-## Ejercicio 5.22
+## Ejercicio 5.23
 Implementar una función que reciba una matriz de enteros de `NxM` elementos, y compute la transpuesta de dicha matriz. Utilizar el siguiente prototipo:
 
 ```c
 void transpuesta(const double* matriz, int filas, int columnas, double* matriz_transpuesta);
 ```
 
-## Ejercicio 5.23
+## Ejercicio 5.24
 Implementar una función que reciba una matriz cuadrada de doubles de dimensión 3, y
 compute su matriz inversa. En caso de poder calcularse deberá retornar **`EXITO`** (0) y en caso de no poder hacerlo, **`ERROR`** (-1). Utilizar el siguiente prototipo:
 
 ```c
-int inversa(const double* matriz, double* matriz_inversa);
+int inversa_mat3(const double* matriz, double* matriz_inversa);
 ```
 
-## Ejercicio 5.24
-Implementar una función que reciba dos matrices de dimensiones `NxM` y `MxP`, y compute el producto de las dos matrices. En caso de poder calcularse deberá retornar **`EXITO`** (0) y en caso de no poder hacerlo, **`ERROR`** (-1). Utilizar el siguiente prototipo:
+## Ejercicio 5.25
+El producto de matrices es una operación muy utilizada en el ámbito de la róbotica, debido a que aplicar una rotación o una traslación a un robot es muy sencillo mediante el uso de las [transformaciones homogéneas](https://es.wikipedia.org/wiki/Matriz_de_transformaci%C3%B3n), las cuales consisten básicamente en multiplicar el estado actual del robot (descrito por un vector) por una matriz de transformación.
+
+![Robot](images/robot.jpg)
+
+Es por eso que como parte de un proyecto de investigación donde se está desarrollando una biblioteca para el control de robots móviles, se nos pide implementar una función que reciba dos matrices de dimensiones `NxM` y `MxP`, y compute el producto de ambas. En caso de poder calcularse deberá retornar **`EXITO`** (0) y en caso de no poder hacerlo, **`ERROR`** (-1). Utilizar el siguiente prototipo:
 
 ```c
 int producto_matricial(const double* matriz_a, int filas_a, int columnas_a, const double* matriz_b, int filas_b, int columnas_b, double* matriz_resultado, int* filas, int* columnas);
 ```
 
-## Ejercicio 5.25
+## Ejercicio 5.26
 El [tatetí](https://es.wikipedia.org/wiki/Tres_en_l%C3%ADnea) es un juego de lápiz y papel entre dos jugadores: **`O`** y **`X`**, que marcan los espacios de un tablero de 3×3 alternadamente.
 
 Para una versión electrónica del mismo, una empresa de videojuegos nos pide que desarrollemos las siguientes funciones:
