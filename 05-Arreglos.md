@@ -68,7 +68,7 @@ int arrcpy(float* arreglo_destino, int largo_destino, const float* arreglo_orige
 ```
 
 ## Ejercicio 5.7
-Implementar una función que reciba dos arreglos y su longitud, y retorne **`1`** si son iguales y **`0`** si no lo son. Utilizar el siguiente prototipo:
+Implementar una función que reciba dos arreglos y su longitud, y retorne **`1`** si son iguales (contienen los mismos elementos) y **`0`** si no lo son. Utilizar el siguiente prototipo:
 
 ```c
 int son_iguales(const float* arreglo_a, const float* arreglo_b, int largo);
@@ -106,7 +106,7 @@ Los ordenes soportados son:
 Dado que una operación entre un vector y un escalar da como resultado otro vector, el resultado de la operación se almacenará en un arreglo de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
-int computar_arreglo_escalar(const double* vector, int largo, double escalar, char operacion, double* resultado);
+int computar_arreglo_escalar(const double* vector, int largo, double escalar, char operacion, int orden, double* resultado);
 ```
 
 ## Ejercicio 5.11
@@ -176,7 +176,8 @@ int esta_apuntando_al_enemigo(const double* vector_mira, const double* vector_en
 ```
 
 ## Ejercicio 5.13
-La derivada nos da información acerca de la razón de cambio de una función y en el caso de la derivada discreta, nos da información sobre dicha razón de cambio pero aplicado a un conjunto de elementos númericos discretos. En este ejercicio, se pide implementar una función que calcule la derivada discreta (por diferencias finitas) del contenido de un vector de enteros. El cálculo de dicha derivada discreta se realiza de la siguiente manera:
+La función derivada nos da información acerca de la razón de cambio de una función y en el caso de la derivada discreta, nos da información sobre dicha razón de cambio pero aplicado a un conjunto de elementos númericos discretos. En este ejercicio, se pide implementar una función que calcule la derivada discreta (por diferencias finitas) del contenido de un vector de enteros. El cálculo de dicha derivada discreta se realiza de la siguiente manera:
+
 ```
 Para x = 0 => (∂f/∂x)[x] = 0
 Para x > 0 => (∂f/∂x)[x] = F[x] − F[x − 1]
@@ -205,7 +206,7 @@ double evaluar_polinomio(const double* coeficientes, int grado, double x);
 ```
 
 ## Ejercicio 5.15
-Implementar una función que permita obtener los coeficientes de la función derivada de una función polinómica, a partir de un vector de coeficientes y su grado recibidos como parámetros. Utilizar el siguiente prototipo:
+Implementar una función que permita obtener los coeficientes de la función derivada de una función polinómica, a partir de un vector de coeficientes y su grado recibidos como parámetros (si no te acordás las reglas de derivación de polinomios, ver https://www.universoformulas.com/matematicas/analisis/derivada-polinomio/). Utilizar el siguiente prototipo:
 
 ```c
 void derivar_polinomio(const double* coeficientes, int grado, double* coeficientes_derivada);
@@ -229,6 +230,8 @@ Se pide implementar dicho filtro teniendo en cuenta lo siguiente:
 
 Utilizar el siguiente prototipo:
 
+<br>
+
 ```c
 double filtro_media_movil(double* ventana, int* indice, int largo, double muestra);
 ```
@@ -249,7 +252,7 @@ Los ordenes soportados son:
 Dado que una operación entre una matriz y un escalar da como resultado otra matriz, el resultado de la operación se almacenará en una matriz de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
-int computar_matriz_escalar(const double* matriz, int filas, int columnas, double escalar, char operacion, double* resultado);
+int computar_matriz_escalar(const double* matriz, int filas, int columnas, double escalar, char operacion, int orden, double* resultado);
 ```
 
 ## Ejercicio 5.19
@@ -281,6 +284,8 @@ enteros y su dimensión, y retorne **`1`** si es una matriz simétrica y **`0`**
 ```c
 int es_simetrica(const int* matriz, int dimension);
 ```
+
+<br>
 
 ## Ejercicio 5.21
 La traza de una matriz cuadrada de `NxM` elementos se define como la suma de los elementos de su diagonal principal. Es decir, **`t(A) = a_11 + a_22 + a_33 + ... + a_nn`**.
@@ -333,10 +338,10 @@ Para una versión electrónica del mismo, una empresa de videojuegos nos pide qu
 a) Implementar una función que marque el tablero en la posición indicada con el símbolo del jugar indicado (**`'O'`** o **`'X'`**). En caso de no poder marcarse dicha casilla (ya sea porque no se encuentra dentro de los límites del tablero o porque ya se encuentra marcada previamente) se deberá retornar **`ERROR`** (-1). En caso contrario se deberá retornar **`EXITO`** (0). Utilizar el siguiente prototipo:
 
 ```c
-int marcar_tablero(const char* tablero, int fila, int columna, char jugador);
+int marcar_jugada(const char* tablero, int fila, int columna, char jugador);
 ```
 
-b) Implementar una función que compruebe si el juego ha terminado. Los posibles desenlaces del mismo son:
+b) Implementar una función que obtenga el estado del juego. Los posibles estados del mismo son:
 - `JUEGO_EN_CURSO`(0)
 - `GANA_JUGADOR_X`(1)
 - `GANA_JUGADOR_O`(2)
@@ -345,5 +350,5 @@ b) Implementar una función que compruebe si el juego ha terminado. Los posibles
 Utilizar el siguiente prototipo:
 
 ```c
-int comprobar_tablero(const char* tablero);
+int obtener_estado(const char* tablero);
 ```
