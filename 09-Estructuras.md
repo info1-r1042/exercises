@@ -18,37 +18,50 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 
 Se deben entregar los tres ejercicios en un zip (usar template como ayuda para el formato).
 
-5. Libreta estudiantil
+**Importante:** Recordá también que se evaluarán las buenas prácticas de programación con respecto al pedido de memoria. Por lo tanto, ¡no te olvides de **liberar** la memoria pedida! (podés ayudarte del programa `valgrind` para veriﬁcarlo).
+
+<br>
 
 ## Ejercicio 9.1
-Escribir un programa que permita manejar información sobre Estudiantes. Se necesita conocer el padrón (identificador único para cada Estudiante), cinco calificaciones en punto flotante, fecha de ingreso a la Facultad, Carrera en la que
-están inscriptos. Las funciones para manipular un Estudiante son:
+Desde la Subsecretaría de Tecnologías de la Información y Comunicación de la facultad nos solicitan implementar un módulo para el SIU Guaraní que permita almacenar y operar sobre las calificaciones finales obtenidas por los estudiantes. Para ello utilizaremos una estructura con los siguientes campos:
+- Nombre (hasta 25 caracteres).
+- Apellido (hasta 25 caracteres).
+- Legajo.
+- Carrera.
+- Código de la materia (valor entero).
+- Nombre de la materia (hasta 25 caracteres).
+- Calificación final (valor entero).
+- Fecha de aprobación (en formato Unix epoch).
+- Libro (hasta 10 caracteres).
+- Folio (valor entero).
 
-a) crearEstudiante: genera un Estudiante con un número de padrón que recibe.
-b) agregarCalificacion: agrega una nota de las cinco notas que puede tener un
-estudiante.
-c) calcularPromedio: devuelve el promedio de las notas que pertenecen a un
-Estudiante.
+Se nos pide implementar un módulo capaz de agregar, eliminar (por legajo y código de la materia), ordenar (por calificación o por apellido de forma lexicográfica), e imprimir calificaciones. Las calificaciones deberán ser almacenados en un arreglo dinámico. Para ello se deberán implementar las siguientes funciones:
 
+```c
+typedef struct Calificacion
+{
+    /*Definir*/
+} Calificacion;
 
-Escribir un programa que cargue un vector de estructuras de tipo:
-struct datos {
-long legajo;
-char apellido[31];
-char nombre[31];
-};
-El ingreso de datos se hará en base a una función con el siguiente prototipo:
-void carga(struct datos *);
-Los datos se ingresan en un vector utilizando la función carga. La condición de
-fin es legajo = 0. Escriba para esto otra función, que reciba la estructura y
-devuelva 1 (uno) si se cumple la condición de fin, o un 0 (cero) en caso
-contrario. El prototipo es:
-int fin(struct dato)
-Una vez generado el vector, se deberá ordenarlo en forma creciente por apellido.
-Para ello, debe también utilizar una función para la cual Ud. debe proponer el
-prototipo.
+// @brief Agrega una calificacion al vector de calificaciones. Retorna EXITO o ERROR.
+int calificaciones_agregar(/*Definir*/ calificaciones, /*Definir*/ cantidad_calificaciones, /*Definir*/ calificacion);
 
+// @brief Elimina una calificacion del vector de calificaciones (por legajo y código de la materia). Retorna EXITO o ERROR.
+int calificaciones_eliminar(/*Definir*/ calificaciones, /*Definir*/ cantidad_calificaciones, /*Definir*/ usuario, /*Definir*/ timestamp);
 
+// @brief Imprime el contenido de una calificacion en pantalla con el siguiente formato ejemplo:
+//
+// Marty McFly - 2014321 - Ing. Electrónica - 950452 - Informática I - R0042 - 101 - 8 (ocho) - 11/02/2013
+void calificacion_imprimir(/*Definir*/ calificacion);
+
+// @brief Imprime el contenido del vector de calificaciones (reutilizar función anterior).
+void calificaciones_imprimir(/*Definir*/ calificaciones, /*Definir*/ cantidad_calificaciones);
+
+// @brief Ordena las calificaciones del vector por calificación o por apellido de forma lexicográfica.
+void calificaciones_ordenar(/*Definir*/ calificaciones, /*Definir*/ cantidad_calificaciones, /*Definir*/ criterio_ordenamiento);
+```
+
+Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
 ## Ejercicio 9.2
 Estamos armando nuestra propia versión de Twitter, y para ello debemos ser capaces de almacenar los Tweets que cada uno de los usuario desee postear. Para ello utilizaremos una estructura con los siguientes campos:
@@ -149,27 +162,60 @@ void pose_imprimir(/*Definir*/ pose);
 void poses_imprimir(/*Definir*/ poses, /*Definir*/ cantidad_poses);
 
 // @brief Ordena las poses del vector por distancia al origen de coordenadas.
-void poses_ordenar(/*Definir*/ tweets, /*Definir*/ cantidad_tweets);
+void poses_ordenar(/*Definir*/ poses, /*Definir*/ cantidad_poses);
 ```
 
+## Ejercicio 9.4
+Un familiar que posee una inmobiliaria nos pide implementar un módulo que permita almacenar y operar sobre las distintas publicaciones de alquiler y venta de inmuebles. Para ello utilizaremos una estructura con los siguientes campos:
+- Operación (Alquiler o Venta).
+- Tipo (Casa, Departamento, PH).
+- Metros cuadrados (valor entero).
+- Cantidad de ambientes.
+- Precio (valor entero)
+- Dirección (hasta 25 caracteres).
+- Barrio (hasta 25 caracteres).
+- Ciudad (hasta 25 caracteres).
+- Anunciante (hasta 25 caracteres).
+- Fecha de publicación (en formato Unix epoch).
+
+Se nos pide implementar un módulo capaz de agregar, eliminar (por anunciante y fecha de publicación), ordenar (por precio o metros cuadrados), e imprimir publicaciones. Las publicaciones deberán ser almacenadas en un arreglo dinámico. Para ello se deberán implementar las siguientes funciones:
+
+```c
+typedef struct Publicacion
+{
+    /*Definir*/
+} Publicacion;
+
+// @brief Agrega una publicacion al vector de publicaciones. Retorna EXITO o ERROR.
+int publicaciones_agregar(/*Definir*/ publicaciones, /*Definir*/ cantidad_publicaciones, /*Definir*/ publicacion);
+
+// @brief Elimina una publicacion del vector de publicaciones (por anunciante y fecha de publicación). Retorna EXITO o ERROR.
+int publicaciones_eliminar(/*Definir*/ publicaciones, /*Definir*/ cantidad_publicaciones, /*Definir*/ anunciante, /*Definir*/ timestamp);
+
+// @brief Imprime el contenido de una publicacion en pantalla con el siguiente formato ejemplo:
+//
+// Departamento - 64m2 - 4 ambientes
+// Venta - USD 155000
+// Maza al 100, Almagro, Capital Federal
+// ---
+// Lepore Propiedades - Publicado hace 259 días.
+void publicacion_imprimir(/*Definir*/ publicacion);
+
+// @brief Imprime el contenido del vector de publicaciones (reutilizar función anterior).
+void publicaciones_imprimir(/*Definir*/ publicaciones, /*Definir*/ cantidad_publicaciones);
+
+// @brief Ordena las publicaciones del vector por precio o metros cuadrados.
+void publicaciones_ordenar(/*Definir*/ publicaciones, /*Definir*/ cantidad_publicaciones, /*Definir*/ criterio_ordenamiento);
+```
+
+Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
 
-3. Login de clientes - inmobiliaria?
 
 
 
-9.3. Ejercicio 3
-Nos piden desarrollar el m ́odulo de login de una aplicaci ́on de streaming. Dicho m ́odulo consiste en el
-desarrollo de un arreglo est ́atico de estructuras para manejar la informaci ́on de los clientes. Cada cliente
-tendr ́a su informaci ́on contenida en una estructura, la cual consistir ́a en “usuario”, “contrase ̃na”, y
-“fecha de  ́ultimo login”. El m ́odulo debe ser capaz de agregar, eliminar, ordenar (por hora de  ́ultimo
-login), e imprimir usuarios. El arreglo tendr ́a un m ́aximo de 10 clientes, luego de alcanzada dicha
-cantidad, no se podr ́a agregar ning ́un nuevo cliente, debiendo imprimirse un mensaje de error por
-pantalla.
 
-9.4. Ejercicio 4
-Desarrollar el Ejercicio 3, pero implementando un arreglo din ́amico ya que no se quiere tener un l ́ımite
-de clientes fijo en la aplicaci ́on.
+
 
 
 4. Cuentas bancarias
@@ -348,6 +394,18 @@ Implementá la función del inciso c ¡pero validá!
 
 
 
+
+
+
+
+9.3. Ejercicio 3
+Nos piden desarrollar el m ́odulo de login de una aplicaci ́on de streaming. Dicho m ́odulo consiste en el
+desarrollo de un arreglo est ́atico de estructuras para manejar la informaci ́on de los clientes. Cada cliente
+tendr ́a su informaci ́on contenida en una estructura, la cual consistir ́a en “usuario”, “contrase ̃na”, y
+“fecha de  ́ultimo login”. El m ́odulo debe ser capaz de agregar, eliminar, ordenar (por hora de  ́ultimo
+login), e imprimir usuarios. El arreglo tendr ́a un m ́aximo de 10 clientes, luego de alcanzada dicha
+cantidad, no se podr ́a agregar ning ́un nuevo cliente, debiendo imprimirse un mensaje de error por
+pantalla.
 
 
 
