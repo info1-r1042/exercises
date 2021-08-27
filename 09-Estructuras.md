@@ -210,36 +210,54 @@ void publicaciones_ordenar(/*Definir*/ publicaciones, /*Definir*/ cantidad_publi
 
 Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
+## Ejercicio 9.5
+Para un banco se nos pide implementar un módulo que permita almacenar y operar sobre las distintas cuentas bancarias de un grupo de clientes. Para ello utilizaremos una estructura con los siguientes campos:
+- Nombre (hasta 25 caracteres).
+- Usuario (hasta 25 caracteres).
+- Contraseña (hasta 25 caracteres).
+- DNI.
+- Fecha de última actividad (en formato Unix epoch).
+- Dinero en cuenta.
 
+Se nos pide implementar un módulo capaz de agregar, eliminar (por usuario), realizar depósitos o extracciones de dinero, y mostrar el estado de cuenta. Las cuentas deberán ser almacenadas en un arreglo dinámico. Para ello se deberán implementar las siguientes funciones:
 
+```c
+typedef struct Cuenta
+{
+    /*Definir*/
+} Cuenta;
 
+// @brief Agrega una cuenta al vector de cuentas. Retorna EXITO o ERROR.
+int cuentas_agregar(/*Definir*/ cuentas, /*Definir*/ cantidad_cuentas, /*Definir*/ cuenta);
 
+// @brief Elimina una cuenta del vector de cuentas (por usuario). Retorna EXITO o ERROR.
+int cuentas_eliminar(/*Definir*/ cuentas, /*Definir*/ cantidad_cuentas, /*Definir*/ usuario);
 
+// @brief Realiza un depósito a una cuenta del vector de cuentas (por usuario). Retorna EXITO o ERROR.
+int cuentas_deposito(/*Definir*/ cuentas, /*Definir*/ cantidad_cuentas, /*Definir*/ usuario, /*Definir*/ monto);
 
+// @brief Realiza una extracción de una cuenta del vector de cuentas (por usuario). Retorna EXITO o ERROR.
+// Nota: No se admiten valores negativos en las cuentas.
+int cuentas_extraccion(/*Definir*/ cuentas, /*Definir*/ cantidad_cuentas, /*Definir*/ usuario, /*Definir*/ monto);
 
+// @brief Imprime el estado de una cuenta en pantalla con el siguiente formato ejemplo:
+//
+// Banco Gringotts
+// Nymphadora Tonks - @tonks
+// DNI: 123456789
+// 
+// Saldo: 654321
+// Última actividad: 14:12 - 10/04/98
+void cuentas_imprimir(/*Definir*/ cuenta);
 
-4. Cuentas bancarias
+// @brief Imprime el contenido del vector de cuentas (reutilizar función anterior).
+void cuentas_imprimir(/*Definir*/ cuentas, /*Definir*/ cantidad_cuentas);
+```
 
+Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
-## Ejercicio 9.6
-Definí un tipo de dato basado en estructuras que permita almacenar la información de una tarjeta de crédito:
-Nº de tarjeta, nombre del titular, fecha de expiración.
-
-## Ejercicio 9.6
-En función de las estructuras ya definidas en ejercicios previos, definir un tipo de
-dato basado en estructuras anidadas que permita almacenar la siguiente
-información de un cliente:
- Nombre y apellido.
- ID de cliente.
- Fecha de alta.
- Fecha de última modificación.
- Domicilio particular.
- Domicilio laboral.
-Nº de tarjeta de crédito.
 
 6. Automoviles - concesionaria
-
-
 
 ## Ejercicio 9.4
 Definí una estructura de datos que permita representar a un automóvil. Un automóvil posee las siguientes características:
