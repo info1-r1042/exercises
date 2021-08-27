@@ -47,7 +47,7 @@ typedef struct Calificacion
 int calificaciones_agregar(/*Definir*/ calificaciones, /*Definir*/ cantidad_calificaciones, /*Definir*/ calificacion);
 
 // @brief Elimina una calificacion del vector de calificaciones (por legajo y código de la materia). Retorna EXITO o ERROR.
-int calificaciones_eliminar(/*Definir*/ calificaciones, /*Definir*/ cantidad_calificaciones, /*Definir*/ usuario, /*Definir*/ timestamp);
+int calificaciones_eliminar(/*Definir*/ calificaciones, /*Definir*/ cantidad_calificaciones, /*Definir*/ legajo, /*Definir*/ codigo_materia);
 
 // @brief Imprime el contenido de una calificacion en pantalla con el siguiente formato ejemplo:
 //
@@ -61,7 +61,7 @@ void calificaciones_imprimir(/*Definir*/ calificaciones, /*Definir*/ cantidad_ca
 void calificaciones_ordenar(/*Definir*/ calificaciones, /*Definir*/ cantidad_calificaciones, /*Definir*/ criterio_ordenamiento);
 ```
 
-Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
+**Importante:** Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
 ## Ejercicio 9.2
 Estamos armando nuestra propia versión de Twitter, y para ello debemos ser capaces de almacenar los Tweets que cada uno de los usuario desee postear. Para ello utilizaremos una estructura con los siguientes campos:
@@ -104,7 +104,7 @@ void tweets_imprimir(/*Definir*/ tweets, /*Definir*/ cantidad_tweets);
 void tweets_ordenar(/*Definir*/ tweets, /*Definir*/ cantidad_tweets, /*Definir*/ criterio_ordenamiento);
 ```
 
-Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
+**Importante:** Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
 ## Ejercicio 9.3
 Para un proyecto de un grupo de investigación de robótica de la facultad se nos pide implementar un módulo que permita almacenar y operar sobre las poses obtenidas de un robot. La pose de un robot nos dice su ubicación, tanto en dos o tres dimensiones y también su orientación. Los mensajes de pose recibidos poseen el siguiente formato:
@@ -141,8 +141,8 @@ Se nos pide implementar un módulo capaz de agregar, eliminar (por robot y times
 // @brief Agrega una pose al vector de poses. Retorna EXITO o ERROR.
 int poses_agregar(/*Definir*/ poses, /*Definir*/ cantidad_poses, /*Definir*/ pose);
 
-// @brief Elimina un pose del vector de poses (por usuario y timestamp). Retorna EXITO o ERROR.
-int poses_eliminar(/*Definir*/ poses, /*Definir*/ cantidad_poses, /*Definir*/ usuario, /*Definir*/ timestamp);
+// @brief Elimina un pose del vector de poses (por robot y timestamp). Retorna EXITO o ERROR.
+int poses_eliminar(/*Definir*/ poses, /*Definir*/ cantidad_poses, /*Definir*/ robot, /*Definir*/ timestamp);
 
 // @brief Imprime la pose del robot en pantalla con el siguiente formato ejemplo:
 //
@@ -164,6 +164,8 @@ void poses_imprimir(/*Definir*/ poses, /*Definir*/ cantidad_poses);
 // @brief Ordena las poses del vector por distancia al origen de coordenadas.
 void poses_ordenar(/*Definir*/ poses, /*Definir*/ cantidad_poses);
 ```
+
+**Importante:** Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
 ## Ejercicio 9.4
 Un familiar que posee una inmobiliaria nos pide implementar un módulo que permita almacenar y operar sobre las distintas publicaciones de alquiler y venta de inmuebles. Para ello utilizaremos una estructura con los siguientes campos:
@@ -208,10 +210,10 @@ void publicaciones_imprimir(/*Definir*/ publicaciones, /*Definir*/ cantidad_publ
 void publicaciones_ordenar(/*Definir*/ publicaciones, /*Definir*/ cantidad_publicaciones, /*Definir*/ criterio_ordenamiento);
 ```
 
-Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
+**Importante:** Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
 ## Ejercicio 9.5
-Para un banco se nos pide implementar un módulo que permita almacenar y operar sobre las distintas cuentas bancarias de un grupo de clientes. Para ello utilizaremos una estructura con los siguientes campos:
+Un banco nos pide implementar un módulo que permita almacenar y operar sobre las distintas cuentas bancarias de un grupo de clientes. Para ello utilizaremos una estructura con los siguientes campos:
 - Nombre (hasta 25 caracteres).
 - Usuario (hasta 25 caracteres).
 - Contraseña (hasta 25 caracteres).
@@ -254,183 +256,50 @@ void cuentas_imprimir(/*Definir*/ cuenta);
 void cuentas_imprimir(/*Definir*/ cuentas, /*Definir*/ cantidad_cuentas);
 ```
 
-Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
+**Importante:** Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
+## Ejercicio 9.6
+Un amigo dueño de una concesionaria de autos nos pide implementar un módulo que permita almacenar y operar sobre las distintas operaciones de venta de automóviles. Para ello utilizaremos una estructura con los siguientes campos:
+- Marca (hasta 25 caracteres).
+- Modelo (hasta 25 caracteres).
+- Año de fabricación (valor entero).
+- Cilindrada (valor real).
+- Color.
+- Patente.
+- Precio de venta.
+- Kilometraje.
 
-6. Automoviles - concesionaria
-
-## Ejercicio 9.4
-Definí una estructura de datos que permita representar a un automóvil. Un automóvil posee las siguientes características:
-- numero_dominio: el número de patente.
-- numero_motor: el número que trae grabado el motor.
-- marca: la marca del automóvil.
-- modelo: el modelo del automóvil.
-- tamaño_motor: el número que indica la cilindrada del motor.
-- color: el color de la carrocería.
-
-Luego implementá las siguientes funciones para manipular dicha estructura:
-
-```c
-// @brief Genera una instancia de tipo Automóvil con valores de inicialización adecuados para cada uno de sus atributos.
-Automovil automovil_crear();
-
-// @brief Imprime los atributos del automóvil en pantalla.
-void automovil_mostrar(Automovil automovil);
-
-// @brief Cambia el color del automovil.
-void automovil_cambiar_color(Automovil* automovil, /*Definir*/ color);
-```
-
-## Ejercicio 9.5
-Escribir un programa que permita al usuario generar un vector de automóviles, los muestre ordenados según el número de dominio, permita modificar cualquiera de los atributos de un automóvil, ofrezca la posibilidad de agregar un
-nuevo automóvil a la lista, de eliminar un automóvil a la lista, permita determinar cuál es el automóvil de mayor potencia presente en la lista.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Ejercicio 9.1
-Implementá una función que reciba un ángulo expresado en radianes y lo devuelva en formato sexagesimal. Utilizá el siguiente prototipo:
+Se nos pide implementar un módulo capaz de agregar, eliminar (por patente), ordenar (por marca **y** modelo), e imprimir los automóviles. Las automóviles deberán ser almacenadas en un arreglo dinámico. Para ello se deberán implementar las siguientes funciones:
 
 ```c
-typedef struct AnguloSexagesimal
+typedef struct Automovil
 {
-    int grados;
-    int minutos;
-    int segundos;
-} AnguloSexagesimal;
+    /*Definir*/
+} Automovil;
 
-AnguloSexagesimal a_sexagesimal(float angulo_en_radianes);
+// @brief Agrega una automóvil al vector de automóviles. Retorna EXITO o ERROR.
+int automoviles_agregar(/*Definir*/ automoviles, /*Definir*/ cantidad_automoviles, /*Definir*/ automovil);
+
+// @brief Elimina un automóvil del vector de automóviles (por patente). Retorna EXITO o ERROR.
+int automoviles_eliminar(/*Definir*/ automoviles, /*Definir*/ cantidad_automoviles, /*Definir*/ patente);
+
+// @brief Imprime los detalles de un automóvil en pantalla con el siguiente formato ejemplo:
+//
+// Renault Clio RT - 1.4
+// 1994 | 144000 km
+// 
+// $ 330000
+// Rojo - RST 123
+void automovil_imprimir(/*Definir*/ automovil);
+
+// @brief Imprime el contenido del vector de automóviles (reutilizar función anterior).
+void automoviles_imprimir(/*Definir*/ automoviles, /*Definir*/ cantidad_automoviles);
+
+// @brief Ordena los automóviles del vector por marca y modelo (es decir, deben ordenarse lexicográficamente por marca primero y luego dentro de cada marca, deben ordenarse a su vez por modelo).
+void automoviles_ordenar(/*Definir*/ automoviles, /*Definir*/ cantidad_automoviles);
 ```
 
-## Ejercicio 9.2
-Definí una estructura de datos que permita representar el tiempo, es decir, horas, minutos y segundos.
-
-Luego implementá las siguientes funciones para manipular dicha estructura:
-
-```c
-// @brief Genera un estructura del tipo Tiempo inicializado en 0 horas, 0 minutos y 0 segundos.
-Tiempo tiempo_crear();
-
-// @brief Imprime la hora en el formato "hh:mm:ss" en pantalla.
-void tiempo_mostrar(Tiempo tiempo);
-
-// @brief Recibe las horas minutos y segundos como argumentos y setea los valores en los campos de la estructura.
-void tiempo_set(Tiempo* tiempo, int horas, int minutos, int segundos);
-```
-
-## Ejercicio 9.3
-Definí una estructura de datos que permita representar una fecha, es decir, día, mes y año.
-
-Luego implementá las siguientes funciones para manipular dicha estructura:
-
-```c
-// @brief Genera un estructura del tipo Fecha a partir de la fecha indicada.
-Fecha fecha_crear(int dia, int mes, int año);
-
-// @brief Imprime la fecha en pantalla.
-void fecha_mostrar(Fecha fecha);
-
-// @brief Aumenta la fecha en un día.
-void fecha_incrementar_dia(Fecha* fecha);
-
-// @brief Disminuye la fecha en un día.
-void fecha_decrementar_dia(Fecha* fecha);
-```
-
-
-
-
-
-
-Ejercicio 7.21.
-Implementar un Tipo de Dato “Vector” que incorpore en forma segura y
-conveniente las funcionalidades de un arreglo estático estándar de punteros a
-datos, utilizando memoria dinámica.
-
-Ejercicio 7.22.
-Se tienen la siguiente estructura:
-struct datos {
-long cod_art;
-int cantidad;
-char[26] descripción;
-};
-Escriba un programa que realice lo siguiente:
- Cargue datos en memoria, correspondientes a dicha estructura (fin de
-datos: cod_art = 0)
- Ordene en forma creciente por cantidad, usando vector de punteros
-
-
-
-
-
-
-
-
-
-
-
-Una estructura para manejar inventarios que contenga un campo para la descripción del producto (máximo 30 caracteres), un número para el número de parte en el inventario, un punto flotante para el precio, un entero para la cantidad que hay en el almacén y un entero para el lugar donde se almacena.
-
-Una para manejar una dirección física que contiene arreglos para el país (máximo 40 caracteres), la provincia (máximo 30 caracteres), la ciudad (máx. 20), la dirección (máx. 30) y el código postal (10).
-
-Una persona, con un arreglo para el nombre, otro para el apellido y una estructura como la del inciso anterior.
-
-Una estructura, registro, que nos sirva para mantener un registro de los consumos de un vehículo, como en el último ejercicio de la guía 1. Para ello, debe contener un número para almacenar una cantidad de kilómetros, un número real para almacenar el costo del combustible, un número real para almacenar el dinero utilizado en una recarga, un time_t para almacenar la fecha, un booleano para indicar si se llenó el tanque y un arreglo para almacenar algún comentario.
-
-Definí una estructura punto que contenga las coordenadas de un punto en .
-
-Definí un nuevo tipo utilizando la definición de la estructura punto.
-
-Implementá una función que reciba dos estructuras punto y calcule la distancia euclídea entre ambos puntos. Recuerde que la distancia euclídea es
-
-donde  para .
-
-Implementá la función del inciso c ¡pero validá!
-
-
-
-
-
-
-
-9.3. Ejercicio 3
-Nos piden desarrollar el m ́odulo de login de una aplicaci ́on de streaming. Dicho m ́odulo consiste en el
-desarrollo de un arreglo est ́atico de estructuras para manejar la informaci ́on de los clientes. Cada cliente
-tendr ́a su informaci ́on contenida en una estructura, la cual consistir ́a en “usuario”, “contrase ̃na”, y
-“fecha de  ́ultimo login”. El m ́odulo debe ser capaz de agregar, eliminar, ordenar (por hora de  ́ultimo
-login), e imprimir usuarios. El arreglo tendr ́a un m ́aximo de 10 clientes, luego de alcanzada dicha
-cantidad, no se podr ́a agregar ning ́un nuevo cliente, debiendo imprimirse un mensaje de error por
-pantalla.
-
-
-
-
-
-
-
+**Importante:** Se pide también implementar un main que demuestre el correcto funcionamiento del módulo.
 
 ## Referencias
 Algunos ejercicios fueron obtenidos y adaptados de:
