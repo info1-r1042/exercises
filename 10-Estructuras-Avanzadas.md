@@ -31,9 +31,9 @@ Se desea implementar un módulo de manejo de colas. Para ello, dicho módulo deb
 <br><br><br><br><br>
 
 ## Ejercicio 1.3
-Implemente un programa que permita manejar la cola de un servicio telefonico:<br> 
+Implemente un programa que permita manejar la lista de espera de un servicio telefonico:<br> 
 Al ingresar por consola la letra C, se podrá ingresar un nuevo cliente que poseerá: un nombre, apellido, edad y, el sistema le entregará un <i>número de atención</i>.<br>
-Al ingresar por consola la letra A, el sistema permite 'atender' a los clientes, con lo cual al ingresar algún numero de atención el sistema muestra los datos de dicho cliente, si existe, y da la opcion de retirarlo de la cola.
+Al ingresar por consola la letra A, el sistema permite 'atender' a los clientes, con lo cual al ingresar algún numero de atención el sistema muestra los datos de dicho cliente, si existe, y da la opcion de retirarlo de la lista.
 <br><br>
 
 ## Ejercicio 1.4
