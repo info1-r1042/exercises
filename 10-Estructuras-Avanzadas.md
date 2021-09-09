@@ -70,6 +70,13 @@ Para esto, es necesario tener tres pilas: una origen, en la cual se encuentran l
 
 
 ## Ejercicio 1.6
+Para este ejercicio deberá desarrollar un programa que simule un colectivo, donde entran y salen pasajeros del mismo, como si fuera una cola. Para dicho programa usted tendrá un menú en el cual tendrá dos opciones para el chofer: abrir la puerta delantera y, abrir la puerta trasera.<br>
+Al abrir la puerta delantera los pasajeros ingresan a la cola mientras que al abrir la puerta trasera los pasajeros salen. En este caso el tiempo de ingreso y egreso será de un segundo, por ejemplo: luego de que ingrese un pasajero, pasará un segundo antes de que ingrese otro a no ser que se salga del menu de ingreso.<br>
+Considere a cada pasajero como una estructura de datos que contiene un nombre y un número de ticket. El nombre deberá generarse aleatoriamente mientras que el ticket es un contador que se reinicia con el inicio del programa.
+<br><br>
+
+**Nota:** Solo es posible abrir una puerta por vez y el colectivo tiene un límite de 30 pasajeros. <br><br>
+![imagen de colectivo](/home/milagros/Documents/info1/imagenes/colectivo.jpg)
 
 ## Ejercicio 1.7
 
