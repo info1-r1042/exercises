@@ -76,7 +76,7 @@ Considere a cada pasajero como una estructura de datos que contiene un nombre y 
 <br><br>
 
 **Nota:** Solo es posible abrir una puerta por vez y el colectivo tiene un límite de 30 pasajeros. <br><br>
-![imagen de colectivo](/home/milagros/Documents/info1/imagenes/colectivo.jpg)
+![imagen de colectivo](/home/milagros/Documents/info1/imagenes/colectivo.jpeg)
 
 ## Ejercicio 1.7
 
