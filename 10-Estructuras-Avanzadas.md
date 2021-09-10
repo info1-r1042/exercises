@@ -93,7 +93,7 @@ Deberá generar 4 funciones: <br>
 **Nota:** Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. 
 <br>
 
-![imagen de colectivo](/home/milagros/Documents/info1/imagenes/torre_control.jpeg)
+![imagen de torre de control](/home/milagros/Documents/info1/imagenes/torre_control.jpeg)
 
 <br><br><br><br><br><br><br><br>
 
