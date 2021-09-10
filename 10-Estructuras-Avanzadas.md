@@ -28,6 +28,7 @@ Se desea implementar un módulo de manejo de colas. Para ello, dicho módulo deb
 |int espiar(Nodo* cola, int largo, Nodo* nodo)|Devuelve el valor del nodo a quitar de la cola.|
 |int mostrar(Nodo* cola, int largo) |Imprime el contenido de la cola.|
 | | |
+
 <br><br><br><br><br>
 
 ## Ejercicio 1.3
@@ -67,23 +68,39 @@ Para esto, es necesario tener tres pilas: una origen, en la cual se encuentran l
 - Sólo se puede mover un disco a la vez, cada disco se moverá cuando se oprima la tecla 's'.
 - Un disco de mayor tamaño no puede quedar arriba de uno más chico
 - Solo se puede desplazar el disco que se encuentre arriba de los otros en una pila
-
+<br>
 
 ## Ejercicio 1.6
+Para este ejercicio deberá desarrollar un programa que simule un colectivo, donde entran y salen pasajeros del mismo, como si fuera una cola. Para dicho programa usted tendrá un menú en el cual tendrá dos opciones para el chofer: abrir la puerta delantera y, abrir la puerta trasera.<br>
+Al abrir la puerta delantera los pasajeros ingresan a la cola mientras que al abrir la puerta trasera los pasajeros salen. En este caso el tiempo de ingreso y egreso será de un segundo, por ejemplo: luego de que ingrese un pasajero, pasará un segundo antes de que ingrese otro a no ser que se salga del menu de ingreso(se cierre la primer puerta).<br>
+Considere a cada pasajero como una estructura de datos que contiene un nombre y un número de ticket. El nombre deberá generarse aleatoriamente mientras que el ticket es un contador que se reinicia con el inicio del programa.
+<br><br>
+
+**Nota:** Solo es posible abrir una puerta por vez y el colectivo tiene un límite de 30 pasajeros. <br><br>
+![imagen de colectivo](/home/milagros/Documents/info1/imagenes/bondi.jpeg)
+<br><br><br><br><br>
+
 
 ## Ejercicio 1.7
+Escribir una programa que simule el trabajo de una torre de control de un aeropuerto con una sola pista de aterrizaje. El avión debe considerarse como una estructura que contenga el nombre del avión(por ejemplo 'AR156') y su condicion de espera.<br>
+Deberá generar 4 funciones: <br>
+-  Para avisar que un avión quiere aterrizar en la pista: nuevo_arribo('AR156');//recibe el nombre del avion
+-  Para avisar que un avión quiere despegar de la pista: nueva_partida('AR156');//recibe el nombre del avion
+-  Para mostrar el estado actual de espera (los que esperan para aterrizar y los que esperan para despegar): ver_estado();
+-  Para asignar la pista a un avión: asignar_pista();//quita un avión de la cola
+<br>
 
+**Nota:** Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. 
+<br>
 
-## Ejercicio 1.8
+![imagen de colectivo](/home/milagros/Documents/info1/imagenes/torre_control.jpeg)
 
-
-## Ejercicio 1.9
-
-## Ejercicio 1.10
+<br><br><br><br><br><br><br><br>
 
 
 
 ## Referencias 
 Algunos ejercicios fueron obtenidos y adaptados de:
 - Guía de Trabajos Prácticos 2011 - Informática I - Departamento de Electrónica - UTN FRBA
-
+- Guía de Trabajos Prácticos 2019 - Informática I - Departamento de Electrónica - UTN FRBA
+- Guía de Ejercicios - Algoritmos y Programación I - UBA FIUBA
