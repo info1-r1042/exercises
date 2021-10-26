@@ -46,7 +46,7 @@ Para la metadata se utilizarán archivos de texto en formato [JSON](https://es.w
 {"metadata": {"nombre": "Comfortably Numb", "artista": "Pink Floyd", "album": "The Wall", "genero": "Rock progresivo", "anio": 1979}}
 ```
 
-**Nota:** Para la reproducción de los archivos de audio se podrán usar tanto los ejemplos vistos en clase (para los formatos `.raw` y `.imf`) como la biblioteca [libvlc](https://www.videolan.org/vlc/libvlc.html) (para `.mp3` y otros formatos).
+**Nota:** Para la reproducción de los archivos de audio se podrán usar tanto los ejemplos vistos en clase (para los formatos `.raw` y `.imf`) como la biblioteca [libVLC](https://www.videolan.org/vlc/libvlc.html) (para `.mp3` y otros formatos).
 
 **Ayuda:** Para relevar todos los archivos presentes en un directorio se recomienda consultar la documentación en las páginas de man de las funciones `opendir` y `readdir`.
 
@@ -106,7 +106,7 @@ Se deberán utilizar los siguientes tipos, macros y prototipos:
  */
 typedef enum LogSumidero
 { 
-    LOG_FILE,
+    LOG_ARCHIVO,
     LOG_STDERR
 } LogSumidero;
 
@@ -134,7 +134,7 @@ typedef struct Logger
 
 /*!
  * @brief Macro para simplificar el uso de logger_log (evita que el usuario
- *   tenga que colocar el archivo y la linea donde se genero el log).
+ *   tenga que colocar el archivo y la linea donde se generó el log).
  */
 #define LOGGER_LOG(...) logger_log_interno(__FILE__, __LINE__, __VA_ARGS__)
 
