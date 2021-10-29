@@ -23,7 +23,15 @@ El código fuente entregado por un grupo debe ser escrito en su totalidad por di
 ### Tarea 2.1a (sólo para quienes desarrollan Infotify)
 Se debe incorporar una nueva opción al menú de usuario, la cual se llamará **`"Escuchar canción"`**.
 
-Si el usuario selecciona la opción `Escuchar canción`, el programa relevará de un directorio llamado `media` todos los archivos de audio presentes y le mostrará al usuario un listado enumerado de los mismos (incluyendo su metadata), con la leyenda `Ingrese el número de canción deseada`. Al elegir una canción, la misma deberá reproducirse.
+Si el usuario selecciona la opción `Escuchar canción`, el programa relevará de un directorio llamado `media` todos los archivos de audio presentes y le mostrará al usuario un listado enumerado de los mismos (incluyendo su metadata), con la leyenda `Ingrese el número de canción deseada`, por ejemplo:
+
+```
+No - Tema - Artista - Album - Genero - Año
+1 - Comfortably Numb - Pink Floyd - The Wall - Rock progresivo - 1979
+2 - ...
+```
+
+Al elegir una canción (mediante su número de orden), la misma deberá reproducirse.
 
 Al terminar de reproducirse la canción, deberá volver a aparecer el menú de usuario.
 
@@ -53,7 +61,15 @@ Para la metadata se utilizarán archivos de texto en formato [JSON](https://es.w
 ### Tarea 2.1b (sólo para quienes desarrollan Infotitos)
 Se debe incorporar una nueva opción al menú de usuario, la cual se llamará **`"Ver imagen"`**.
 
-Si el usuario selecciona la opción `Ver imagen`, el programa relevará de un directorio llamado `media` todos los archivos de imagen presentes y le mostrará al usuario un listado enumerado de los mismos (incluyendo su metadata), con la leyenda `Ingrese el número de imagen deseada`. Al elegir una imagen, la misma deberá mostrarse en pantalla.
+Si el usuario selecciona la opción `Ver imagen`, el programa relevará de un directorio llamado `media` todos los archivos de imagen presentes y le mostrará al usuario un listado enumerado de los mismos (incluyendo su metadata), con la leyenda `Ingrese el número de imagen deseada`, por ejemplo:
+
+```
+No - Marca - Modelo - Año - Cilindrada - Color
+1 - Ferrari - Testarossa - 1996 - 4.9 - Rojo
+2 - ...
+```
+
+Al elegir una imagen (mediante su número de orden), la misma deberá mostrarse en pantalla.
 
 Al oprimirse cualquier tecla, deberá cerrarse la imagen y deberá volver a aparecer el menú de usuario.
 
