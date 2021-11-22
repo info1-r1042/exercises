@@ -1,7 +1,7 @@
 # Ejercicios adicionales 14 - Sockets
 
 ## Ejercicio 14.1
-Implemente una aplicación con arquitectura Cliente-Servidor que cumpla con los siguientes requisitos:
+Implementar una aplicación con arquitectura Cliente-Servidor que cumpla con los siguientes requisitos:
 
 **Servidor:**
 - Espera la conexión de un (1) cliente en el puerto TCP pasado como argumento del main.
