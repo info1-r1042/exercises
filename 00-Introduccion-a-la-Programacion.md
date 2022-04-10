@@ -1,4 +1,4 @@
-# Guía de Ejercicios 0 - Introducción a la Programación Estructurada
+# Guía de Ejercicios 0 - Introducción a la Programación
 
 ```
 Advertencia
@@ -66,4 +66,4 @@ Desarrollar el pseudocódigo y el diagrama de flujo de un programa que dado un n
 
 ## Referencias
 Algunos ejercicios obtenidos y adaptados de:
-- Guía de Introducción a la Programación Estructurada 2022 - Informática I - Departamento de Electrónica - UTN FRBA
+- Guía de Introducción a la Programación 2022 - Informática I - Departamento de Electrónica - UTN FRBA
