@@ -3,7 +3,7 @@
 ```
 Advertencia
 
-La resolución conjunta de los ejercicios aquí presentes no está permitida, excepto en la medida en que puedas pedir ayuda a tus compañeros de clase y a otras personas, y siempre que esa ayuda no se reduzca a que otro haga el trabajo por vos.
+La resolución conjunta o grupal de los ejercicios aquí presentes no está permitida, excepto en la medida en que puedas pedir ayuda a tus compañeros de clase y a otras personas, y siempre que esa ayuda no se reduzca a que otro haga el trabajo por vos.
 
 El código fuente entregado por un estudiante debe ser escrito en su totalidad por dicha persona.
 ```
@@ -31,7 +31,7 @@ Escribir un programa que dado un tiempo en horas, minutos y segundos compute el 
 Escribir un programa que dadas las coordenadas de un vector en R2 `(x,y)`,
 compute la norma del mismo. Recordar que:
 <div align="center">
-<img src="https://latex.codecogs.com/svg.latex?\left&space;\|&space;v&space;\right&space;\|=\sqrt{x^{2}&plus;y^{2}}" title="\left \| v \right \|=\sqrt{x^{2}+y^{2}}" />
+  <img src="https://latex.codecogs.com/svg.latex?\left&space;\|&space;v&space;\right&space;\|=\sqrt{x^{2}&plus;y^{2}}" title="\left \| v \right \|=\sqrt{x^{2}+y^{2}}" />
 </div>
 
 Luego deberá mostrar el resultado obtenido por pantalla.
@@ -141,14 +141,14 @@ informe sus raíces, a partir de la ecuación resolvente:
 </div>
 Luego se debe mostrar el resultado por pantalla, por ejemplo:  
 
-| a | b | c  | Salida por stdout                    |
-|---|---|----|--------------------------------------|
-| 0 | 0 | 0  | No es una ecuación de segundo grado  |
-| 0 | 1 | 1  | No es una ecuación de segundo grado  |
-| 1 | 2 | -8 | r0 = 2.00 ; r1 = -4.00               |
-| 1 | 2 | 1  | r0 = -1.00 ; r1 = -1.00              |
-| 1 | 1 | 1  | No tiene solución en el campo real |
-| 1 | 0 | 4  | No tiene solución en el campo real |
+| a | b | c  | Salida por stdout                   |
+|---|---|----|-------------------------------------|
+| 0 | 0 | 0  | No es una ecuación de segundo grado |
+| 0 | 1 | 1  | No es una ecuación de segundo grado |
+| 1 | 2 | -8 | r0 = 2.00 ; r1 = -4.00              |
+| 1 | 2 | 1  | r0 = -1.00 ; r1 = -1.00             |
+| 1 | 1 | 1  | No tiene solución en el campo real  |
+| 1 | 0 | 4  | No tiene solución en el campo real  |
 
 ## Ejercicio 1.20
 Escribir un programa que dado un número real devuelva su valor absoluto.
