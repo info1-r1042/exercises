@@ -1,4 +1,22 @@
-# Ejercicios adicionales 12 - Procesos y Señales
+# Guía de Ejercicios 12 - Procesos y Señales
+
+```
+Advertencia
+
+La resolución conjunta o grupal de los ejercicios aquí presentes no está permitida, excepto en la medida en que puedas pedir ayuda a tus compañeros de clase y a otras personas, y siempre que esa ayuda no se reduzca a que otro haga el trabajo por vos.
+
+El código fuente entregado por un estudiante debe ser escrito en su totalidad por dicha persona.
+```
+
+**Condiciones de entrega:**
+
+| **¿Qué se entrega?**            | **¿Qué no se entrega?**                           |
+| ----                            |   ----                                            |
+| Archivos fuente/source (.c)     | Archivos objeto (.o)                              |
+| Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
+| Bibliotecas específicas (.a)    |                                                   |
+
+Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
 ## Ejercicio 12.1
 Implementar un programa que genere dos procesos, uno padre y uno hijo. El proceso padre debe imprimir la leyenda `"Soy el proceso padre, mi PID es ... y el PID de mi hijo es ..."`. El proceso hijo debe imprimir la leyenda `"Soy el proceso hijo, mi PID es ... y el PID de mi padre es ..."`. Se deben realizar tres versiones de este programa, una donde el proceso hijo finalice **correctamente**, una donde el proceso hijo quede en estado **zombie** y una donde el proceso hijo quede en estado **huérfano**.

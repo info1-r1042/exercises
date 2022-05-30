@@ -8,15 +8,15 @@ La resolución conjunta o grupal de los ejercicios aquí presentes no está perm
 El código fuente entregado por un estudiante debe ser escrito en su totalidad por dicha persona.
 ```
 
-***<u>Condiciones de entrega:</u>***
+**Condiciones de entrega:**
 
-| <b>¿Qué se entrega?</b>         | <b>¿Qué no se entrega?</b>                        |
+| **¿Qué se entrega?**            | **¿Qué no se entrega?**                           |
 | ----                            |   ----                                            |
 | Archivos fuente/source (.c)     | Archivos objeto (.o)                              |
 | Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
-| Bibliotecas específicas (.a)    |   |
+| Bibliotecas específicas (.a)    |                                                   |
 
-Se deben entregar los tres ejercicios en un zip (usar template como ayuda para el formato).
+Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
 **Importante:** Recordá validar **siempre** que se reciben la cantidad de argumentos esperados. En caso contrario, el programa finalizará sin efectuar operación alguna y retornará el valor **`1`**.
 

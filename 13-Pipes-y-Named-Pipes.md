@@ -1,4 +1,22 @@
-# Ejercicios adicionales 13 - Pipes y Named Pipes
+# Guía de Ejercicios 13 - Pipes y Named Pipes
+
+```
+Advertencia
+
+La resolución conjunta o grupal de los ejercicios aquí presentes no está permitida, excepto en la medida en que puedas pedir ayuda a tus compañeros de clase y a otras personas, y siempre que esa ayuda no se reduzca a que otro haga el trabajo por vos.
+
+El código fuente entregado por un estudiante debe ser escrito en su totalidad por dicha persona.
+```
+
+**Condiciones de entrega:**
+
+| **¿Qué se entrega?**            | **¿Qué no se entrega?**                           |
+| ----                            |   ----                                            |
+| Archivos fuente/source (.c)     | Archivos objeto (.o)                              |
+| Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
+| Bibliotecas específicas (.a)    |                                                   |
+
+Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
 ## Ejercicio 13.1
 Implementar un programa que genere dos procesos, uno padre y uno hijo. Dichos procesos deben comunicarse a través de dos pipes (debido a que son unidireccionales). El proceso padre debe enviarle al proceso hijo la leyenda `"Luke, yo soy tu padre"` a lo que el proceso hijo debe responder `"Noooooooooo!!!"`. Colocar los printf() que considere necesario para demostrar el correcto funcionamiento de la comunicación. 

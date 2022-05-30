@@ -1,4 +1,22 @@
-# Ejercicios adicionales 14 - Sockets
+# Guía de Ejercicios 14 - Sockets
+
+```
+Advertencia
+
+La resolución conjunta o grupal de los ejercicios aquí presentes no está permitida, excepto en la medida en que puedas pedir ayuda a tus compañeros de clase y a otras personas, y siempre que esa ayuda no se reduzca a que otro haga el trabajo por vos.
+
+El código fuente entregado por un estudiante debe ser escrito en su totalidad por dicha persona.
+```
+
+**Condiciones de entrega:**
+
+| **¿Qué se entrega?**            | **¿Qué no se entrega?**                           |
+| ----                            |   ----                                            |
+| Archivos fuente/source (.c)     | Archivos objeto (.o)                              |
+| Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
+| Bibliotecas específicas (.a)    |                                                   |
+
+Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
 ## Ejercicio 14.1
 Implementar una aplicación con arquitectura Cliente-Servidor que cumpla con los siguientes requisitos:

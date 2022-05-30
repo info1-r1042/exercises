@@ -1,4 +1,4 @@
-# Guía de Ejercicios #10 - Estructuras avanzadas
+# Guía de Ejercicios 10 - Estructuras Avanzadas
 
 ```
 Advertencia
@@ -7,7 +7,16 @@ La resolución conjunta o grupal de los ejercicios aquí presentes no está perm
 
 El código fuente entregado por un estudiante debe ser escrito en su totalidad por dicha persona.
 ```
-<br><br>
+
+**Condiciones de entrega:**
+
+| **¿Qué se entrega?**            | **¿Qué no se entrega?**                           |
+| ----                            |   ----                                            |
+| Archivos fuente/source (.c)     | Archivos objeto (.o)                              |
+| Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
+| Bibliotecas específicas (.a)    |                                                   |
+
+Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
 ## Ejercicio 1.1
 Se desea implementar un módulo de manejo de pilas. Para ello, dicho módulo debe poseer las siguientes funciones:
