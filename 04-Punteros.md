@@ -57,20 +57,36 @@ int calculadora(int x, int y, char operacion, int* resultado);
 ```
 
 ## Ejercicio 4.5
+Implementar una función que convierta una letra minúscula a su equivalente mayúscula. Utilizar el siguiente prototipo:
+
+```c
+int a_mayuscula(char* letra);
+```
+
+La función debe devolver `EXITO` (`0`) si se pudo realizar la conversión o `ERROR` (`1`) en caso contrario. 
+
+## Ejercicio 4.6
+Implementar una función que eleve un determinado número al cuadrado. Utilizar el siguiente prototipo:
+
+```c
+void elevar_al_cuadrado(float* numero);
+```
+
+## Ejercicio 4.7
 Implementar una función que convierta un número que representa una cantidad total de segundos, a su equivalente en horas, minutos y segundos, retornando dichos valores en variables pasadas por referencia. Utilizar el siguiente prototipo:
 
 ```c
 void a_sexagesimal(int total_segundos, int* horas, int* minutos, int* segundos);
 ```
 
-## Ejercicio 4.6
+## Ejercicio 4.8
 Implementar una función que convierta un número en grados decimales, a su equivalente en grados, minutos y segundos, retornando dichos valores en variables pasadas por referencia. Utilizar el siguiente prototipo:
 
 ```c
 void a_grados_sexagesimales(float grados_decimales, int* grados, int* minutos, int* segundos);
 ```
 
-## Ejercicio 4.7
+## Ejercicio 4.9
 Implementar la siguiente función:
 
 ```c
@@ -81,7 +97,7 @@ Dicha función recibirá dos números enteros por referencia (`min` y `max`). La
 
 La función debe devolver `ORDENADOS` (`0`) si los números estaban bien ubicados o `DESORDENADOS` (`1`) en caso contrario. 
 
-## Ejercicio 4.8
+## Ejercicio 4.10
 Implementar una función que dadas dos rectas definidas por su pendiente y su ordenada al origen devuelva el punto de intersección. Validar lo que considere necesario. Utilizar el siguiente prototipo:
 
 ```c
@@ -90,7 +106,7 @@ int interseccion_rectas(float m1, float b1, float m2, float b2, float* x, float*
 
 La función debe devolver `EXITO` (`0`) si existe punto de intersección o `ERROR` (`1`) en caso contrario.
 
-## Ejercicio 4.9
+## Ejercicio 4.11
 Implementar una función tal que ingresando los coeficientes `a`, `b` y `c` de
 una ecuación cuadrática <img src="https://latex.codecogs.com/svg.latex?a^{2}x&plus;bx&plus;c=0" title="a^{2}x+bx+c=0" />,
 compute sus raíces, a partir de la ecuación resolvente:
@@ -106,7 +122,7 @@ int raices_cuadratica(float a, float b, float c, float* x1, float* x2);
 
 La función deberá devolver `RAICES_REALES_Y_DISTINTAS` (`0`), `RAICES_REALES_E_IGUALES` (`1`), `RAICES_COMPLEJAS` (`2`) o `ERROR` (`3`) según corresponda.
 
-## Ejercicio 4.10
+## Ejercicio 4.12
 Implementar una función que calcule la mínima cantidad de billetes (moneda peso argentino) con la que se puede alcanzar un determinado monto. Por ejemplo, `2320 ARS = 2*1000 ARS + 3*100 ARS + 1*20 ARS`. Utilizar el siguiente prototipo:
 
 ```c
@@ -115,7 +131,7 @@ int cantidad_billetes(int monto, int* billetes_1000, int* billetes_500, int* bil
 
 La función deberá devolver `MONTO_JUSTO` (`0`) o `MONTO_REDONDEADO` (`1`) según corresponda.
 
-## Ejercicio 4.11
+## Ejercicio 4.13
 Implementar una función que reciba tres números que corresponden a los lados de un triángulo y lo clasifique según sus lados y según sus ángulos. Utilizar el siguiente prototipo:
 
 ```c
@@ -128,7 +144,7 @@ En caso de conformar un triángulo, la función deberá retornar por referencia 
 
 Por otro lado, la función deberá retornar por referencia a través de la variable `segun_angulos` los siguientes valores posibles `ACUTANGULO` (`0`), `RECTANGULO` (`1`) o `OBTUSANGULO` (`2`), según corresponda.
 
-## Ejercicio 4.12
+## Ejercicio 4.14
 Implementar una función que reciba un número entero pasado por referencia y muestre cómo se almacena en memoria. Primero lo mostrará como un entero en formato decimal y en formato hexadecimal y luego mostrará las posiciones de memoria byte a byte y el valor que hay almacenado en formato hexadecimal. Utilizar el siguiente prototipo:
 
 ```c
