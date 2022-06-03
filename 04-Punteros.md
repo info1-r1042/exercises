@@ -120,7 +120,7 @@ Utilizar el siguiente prototipo:
 int raices_cuadratica(float a, float b, float c, float* x1, float* x2);
 ```
 
-La función deberá devolver `RAICES_REALES_Y_DISTINTAS` (`0`), `RAICES_REALES_E_IGUALES` (`1`), `RAICES_COMPLEJAS` (`2`) o `ERROR` (`3`) según corresponda.
+La función deberá devolver `RAICES_REALES_Y_DISTINTAS` (`0`), `RAICES_REALES_E_IGUALES` (`1`), `RAICES_COMPLEJAS` (`2`) o `ERROR` (`3`), según corresponda.
 
 ## Ejercicio 4.12
 Implementar una función que calcule la mínima cantidad de billetes (moneda peso argentino) con la que se puede alcanzar un determinado monto. Por ejemplo, `2320 ARS = 2*1000 ARS + 3*100 ARS + 1*20 ARS`. Utilizar el siguiente prototipo:
@@ -129,7 +129,7 @@ Implementar una función que calcule la mínima cantidad de billetes (moneda pes
 int cantidad_billetes(int monto, int* billetes_1000, int* billetes_500, int* billetes_200, int* billetes_100, int* billetes_50, int* billetes_20, int* billetes_10);
 ```
 
-La función deberá devolver `MONTO_JUSTO` (`0`) o `MONTO_REDONDEADO` (`1`) según corresponda.
+La función deberá devolver `MONTO_JUSTO` (`0`) o `MONTO_REDONDEADO` (`1`), según corresponda.
 
 ## Ejercicio 4.13
 Implementar una función que reciba tres números que corresponden a los lados de un triángulo y lo clasifique según sus lados y según sus ángulos. Utilizar el siguiente prototipo:
@@ -140,9 +140,9 @@ int clasificar_triangulo(float lado1, float lado2, float lado3, int* segun_lados
 
 La función deberá retornar por valor `ES_TRIANGULO` (`0`) o `NO_ES_TRIANGULO` (`1`), según corresponda.
 
-En caso de conformar un triángulo, la función deberá retornar por referencia a través de la variable `segun_lados` los siguientes valores posibles `EQUILATERO` (`0`), `ISOSCELES` (`1`) o `ESCALENO` (`2`), según corresponda.
+En caso de conformar un triángulo, la función deberá retornar por referencia a través de la variable `segun_lados` el valor `EQUILATERO` (`0`), `ISOSCELES` (`1`) o `ESCALENO` (`2`), según corresponda.
 
-Por otro lado, la función deberá retornar por referencia a través de la variable `segun_angulos` los siguientes valores posibles `ACUTANGULO` (`0`), `RECTANGULO` (`1`) o `OBTUSANGULO` (`2`), según corresponda.
+Por otro lado, la función deberá retornar por referencia a través de la variable `segun_angulos` el valor `ACUTANGULO` (`0`), `RECTANGULO` (`1`) o `OBTUSANGULO` (`2`), según corresponda.
 
 ## Ejercicio 4.14
 Implementar una función que reciba un número entero pasado por referencia y muestre cómo se almacena en memoria. Primero lo mostrará como un entero en formato decimal y en formato hexadecimal y luego mostrará las posiciones de memoria byte a byte y el valor que hay almacenado en formato hexadecimal. Utilizar el siguiente prototipo:
