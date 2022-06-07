@@ -18,9 +18,7 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
-**Importante:** Recordar validar **siempre** que no se reciben punteros **`NULL`**. En dicho caso, la función deberá retornar sin efectuar operación alguna y en caso de tener que retornar algún valor devolverá el valor `-1`.
-
-<br>
+**Importante:** Recordar validar **siempre** que no se reciben punteros **`NULL`**. En dicho caso, la función deberá retornar sin efectuar operación alguna y en caso de tener que retornar algún valor, devolverá el valor `-1`.
 
 ## Ejercicios 5.1 - 5.5
 Desarrolle un programa que solicite el ingreso de las calificaciones (como número enteros) del primer parcial de los estudiantes de Informática 1. El ingreso de calificaciones finalizará cuando se ingrese un once (11). Tener en cuenta que las calificaciones deberán ser números comprendidos entre 0 y 10 (0 significa ausente), por lo que se debe validar la carga de datos. Se podrán ingresar como máximo 25 calificaciones. Una vez finalizada la carga de datos, se pide computar e imprimir en pantalla las siguientes estadísticas:
@@ -100,10 +98,10 @@ Las operaciones soportadas son:
 - División (`'/'`)
 
 Los ordenes soportados son:
-- `ESCALAR_VECTOR` (0)
-- `VECTOR_ESCALAR` (1)
+- `ESCALAR_VECTOR` (`0`)
+- `VECTOR_ESCALAR` (`1`)
 
-Dado que una operación entre un vector y un escalar da como resultado otro vector, el resultado de la operación se almacenará en un arreglo de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
+Dado que una operación entre un vector y un escalar da como resultado otro vector, el resultado de la operación se almacenará en un arreglo de resultados. La función deberá retornar `ERROR` (`-1`) si ocurrió algún error, y `EXITO` (`0`) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
 int computar_arreglo_escalar(const double* vector, int largo, double escalar, char operacion, int orden, double* resultado);
@@ -118,7 +116,7 @@ Las operaciones soportadas (todas elemento a elemento) son:
 - Multiplicación (`'*'`)
 - División (`'/'`)
 
-Dado que una operación (elemento a elemento) entre dos vectores da como resultado otro vector, el resultado de la operación se almacenará en un arreglo de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
+Dado que una operación (elemento a elemento) entre dos vectores da como resultado otro vector, el resultado de la operación se almacenará en un arreglo de resultados. La función deberá retornar `ERROR` (`-1`) si ocurrió algún error, y `EXITO` (`0`) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
 int computar_arreglo_arreglo(const double* vector_a, const double* vector_b, int largo, char operacion, double* resultado);
@@ -134,8 +132,6 @@ Esto se debe a que a través de dicha operación es posible obtener fácilmente 
 **Ecuación 1:**
 
 <img src="https://latex.codecogs.com/svg.latex?\vec{a}&space;\cdot&space;\vec{b}=\left&space;|&space;\vec{a}&space;\right&space;|&space;\cdot&space;\left&space;|&space;\vec{b}&space;\right&space;|&space;\cdot&space;\cos&space;\alpha" title="\vec{a} \cdot \vec{b}=\left | \vec{a} \right | \cdot \left | \vec{b} \right | \cdot \cos \alpha" />
-
-<br>
 
 **Ecuación 2:**
 
@@ -198,8 +194,7 @@ void derivar(const double* arreglo, int largo, double* derivada);
 ```
 
 ## Ejercicio 5.14
-Implementar una función que permita evaluar una función polinómica en un punto, a partir de un
-vector de coeficientes y su grado recibidos como parámetros. Utilizar el siguiente prototipo:
+Implementar una función que permita evaluar una función polinómica en un punto, a partir de un vector de coeficientes y su grado recibidos como parámetros. Utilizar el siguiente prototipo:
 
 ```c
 double evaluar_polinomio(const double* coeficientes, int grado, double x);
@@ -213,7 +208,7 @@ void derivar_polinomio(const double* coeficientes, int grado, double* coeficient
 ```
 
 ## Ejercicio 5.16
-Escribir un programa que genere una tabla con muestras de un polinomio ingresado por teclado. El programa debe pedir al usuario el grado del polinomio, los coeficientes del mismo, el valor del comienzo del intervalo de muestreo, el valor final y la cantidad de muestras. Para ello, implementar una función con el siguiente prototipo:
+Escribir un programa que genere una tabla con muestras de un polinomio ingresado por teclado. El programa debe pedir al usuario el grado del polinomio, los coeficientes del mismo, el valor del comienzo del intervalo de muestreo, el valor final y la cantidad de muestras (máximo 100). Para ello, implementar una función con el siguiente prototipo:
 
 ```c
 void muestrear_polinomio(const double* coeficientes, int grado, double inicio, double fin, double* muestras, int cantidad_muestras);
@@ -230,8 +225,6 @@ Se pide implementar dicho filtro teniendo en cuenta lo siguiente:
 
 Utilizar el siguiente prototipo:
 
-<br>
-
 ```c
 double filtro_media_movil(double* ventana, int* indice, int largo, double muestra);
 ```
@@ -246,10 +239,10 @@ Las operaciones soportadas son:
 - División (`'/'`)
 
 Los ordenes soportados son:
-- `ESCALAR_MATRIZ` (0)
-- `MATRIZ_ESCALAR` (1)
+- `ESCALAR_MATRIZ` (`0`)
+- `MATRIZ_ESCALAR` (`1`)
 
-Dado que una operación entre una matriz y un escalar da como resultado otra matriz, el resultado de la operación se almacenará en una matriz de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
+Dado que una operación entre una matriz y un escalar da como resultado otra matriz, el resultado de la operación se almacenará en una matriz de resultados. La función deberá retornar `ERROR` (`-1`) si ocurrió algún error, y `EXITO` (`0`) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
 int computar_matriz_escalar(const double* matriz, int filas, int columnas, double escalar, char operacion, int orden, double* resultado);
@@ -264,7 +257,7 @@ Las operaciones soportadas (todas elemento a elemento) son:
 - Multiplicación (`'*'`)
 - División (`'/'`)
 
-Dado que una operación (elemento a elemento) entre dos matrices da como resultado otra matriz, el resultado de la operación se almacenará en una matriz de resultados. La función deberá retornar `ERROR` (-1) si ocurrió algún error, y `EXITO` (0) en caso contrario. Utilizar el siguiente prototipo:
+Dado que una operación (elemento a elemento) entre dos matrices da como resultado otra matriz, el resultado de la operación se almacenará en una matriz de resultados. La función deberá retornar `ERROR` (`-1`) si ocurrió algún error, y `EXITO` (`0`) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
 int computar_matriz_matriz(const double* matriz_a, const double* matriz_b, int filas, int columnas, char operacion, double* resultado);
@@ -275,23 +268,18 @@ Una matriz de `NxM` elementos es simétrica, si y solo si:
 - Es una matriz cuadrada (m = n)
 - a_ij = a_ji para todo i, j = 1, 2, 3, 4, ..., n.
 
-Donde a_ij representa el elemento que está en la fila i-ésima y en la columna j-
-ésima de A.
+Donde a_ij representa el elemento que está en la fila i-ésima y en la columna j-ésima de A.
 
-En base a lo anterior, implementar una función que reciba una matriz cuadrada de
-enteros y su dimensión, y retorne **`1`** si es una matriz simétrica y **`0`** si no lo es. Utilizar el siguiente prototipo:
+En base a lo anterior, implementar una función que reciba una matriz cuadrada de enteros y su dimensión, y retorne **`1`** si es una matriz simétrica y **`0`** si no lo es. Utilizar el siguiente prototipo:
 
 ```c
 int es_simetrica(const int* matriz, int dimension);
 ```
 
-<br>
-
 ## Ejercicio 5.21
 La traza de una matriz cuadrada de `NxM` elementos se define como la suma de los elementos de su diagonal principal. Es decir, **`t(A) = a_11 + a_22 + a_33 + ... + a_nn`**.
 
-En base a lo anterior, implementar una función que reciba una matriz cuadrada de
-doubles y su dimensión, y retorne el valor de su traza. Utilizar el siguiente prototipo:
+En base a lo anterior, implementar una función que reciba una matriz cuadrada de doubles y su dimensión, y retorne el valor de su traza. Utilizar el siguiente prototipo:
 
 ```c
 double traza(const double* matriz, int dimension);
@@ -312,8 +300,7 @@ void transpuesta(const double* matriz, int filas, int columnas, double* matriz_t
 ```
 
 ## Ejercicio 5.24
-Implementar una función que reciba una matriz cuadrada de doubles de dimensión 3, y
-compute su matriz inversa. En caso de poder calcularse deberá retornar **`EXITO`** (0) y en caso de no poder hacerlo, **`ERROR`** (-1). Utilizar el siguiente prototipo:
+Implementar una función que reciba una matriz cuadrada de doubles de dimensión 3, y compute su matriz inversa. En caso de poder calcularse deberá retornar **`EXITO`** (`0`) y en caso de no poder hacerlo, **`ERROR`** (`-1`). Utilizar el siguiente prototipo:
 
 ```c
 int inversa_mat3(const double* matriz, double* matriz_inversa);
@@ -324,7 +311,7 @@ El producto de matrices es una operación muy utilizada en el ámbito de la rób
 
 ![Robot](images/robot.jpg)
 
-Es por eso que como parte de un proyecto de investigación donde se está desarrollando una biblioteca para el control de robots móviles, se nos pide implementar una función que reciba dos matrices de dimensiones `NxM` y `MxP`, y compute el producto de ambas. En caso de poder calcularse deberá retornar **`EXITO`** (0) y en caso de no poder hacerlo, **`ERROR`** (-1). Utilizar el siguiente prototipo:
+Es por eso que como parte de un proyecto de investigación donde se está desarrollando una biblioteca para el control de robots móviles, se nos pide implementar una función que reciba dos matrices de dimensiones `NxM` y `MxP`, y compute el producto de ambas. En caso de poder calcularse deberá retornar **`EXITO`** (`0`) y en caso de no poder hacerlo, **`ERROR`** (`-1`). Utilizar el siguiente prototipo:
 
 ```c
 int producto_matricial(const double* matriz_a, int filas_a, int columnas_a, const double* matriz_b, int filas_b, int columnas_b, double* matriz_resultado, int* filas, int* columnas);
@@ -335,17 +322,17 @@ El [tatetí](https://es.wikipedia.org/wiki/Tres_en_l%C3%ADnea) es un juego de l�
 
 Para una versión electrónica del mismo, una empresa de videojuegos nos pide que desarrollemos las siguientes funciones:
 
-a) Implementar una función que marque el tablero en la posición indicada con el símbolo del jugar indicado (**`'O'`** o **`'X'`**). En caso de no poder marcarse dicha casilla (ya sea porque no se encuentra dentro de los límites del tablero o porque ya se encuentra marcada previamente) se deberá retornar **`ERROR`** (-1). En caso contrario se deberá retornar **`EXITO`** (0). Utilizar el siguiente prototipo:
+a) Implementar una función que marque el tablero en la posición indicada con el símbolo del jugar indicado (**`'O'`** o **`'X'`**). En caso de no poder marcarse dicha casilla (ya sea porque no se encuentra dentro de los límites del tablero o porque ya se encuentra marcada previamente) se deberá retornar **`ERROR`** (`-1`). En caso contrario se deberá retornar **`EXITO`** (`0`). Utilizar el siguiente prototipo:
 
 ```c
 int marcar_jugada(const char* tablero, int fila, int columna, char jugador);
 ```
 
 b) Implementar una función que obtenga el estado del juego. Los posibles estados del mismo son:
-- `JUEGO_EN_CURSO`(0)
-- `GANA_JUGADOR_X`(1)
-- `GANA_JUGADOR_O`(2)
-- `EMPATE`(3)
+- `JUEGO_EN_CURSO`(`0`)
+- `GANA_JUGADOR_X`(`1`)
+- `GANA_JUGADOR_O`(`2`)
+- `EMPATE`(`3`)
 
 Utilizar el siguiente prototipo:
 
