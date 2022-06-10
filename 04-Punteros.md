@@ -164,3 +164,8 @@ Dirección                 Valor Hexadecimal
 0x7ffe4dd88dc6:           01
 0x7ffe4dd88dc7:           00
 ```
+
+## Referencias 
+Algunos ejercicios fueron obtenidos y adaptados de:
+- Guía de Trabajos Prácticos 2011 - Informática I - Departamento de Electrónica - UTN FRBA
+- Guía de Ejercicios - Algoritmos y Programación I - UBA FIUBA
