@@ -63,7 +63,7 @@ void strcat(char* dest, const char* orig);
 ```
 
 ## Ejercicio 6.7
-Implementar tu propia version de la función `strcasecmp` de la biblioteca estándar `string` (). Utilizar el siguiente prototipo:
+Implementar tu propia version de la función `strcasecmp` de la biblioteca estándar `string`. Utilizar el siguiente prototipo:
 
 ```c
 int strcasecmp(const char* s1, const char* s2);
@@ -91,28 +91,49 @@ int strlower(char* string);
 ```
 
 ## Ejercicio 6.11
-Implementar una función que invierta el casing, es decir, los caracteres que se encuentren en mayúsculas los convierta a minúsculas y los que están en minúsculas a mayúsculas. La función deberá retornar la cantidad de caracteres convertidos. Utilizar el siguiente prototipo:
+Implementar una función que reciba un string representando un número entero, y convierta su contenido al número que representa. Utilizar el siguiente prototipo:
 
 ```c
-int strinvertcase(char* string);
+int strtoi(const char* string);
 ```
 
 ## Ejercicio 6.12
+Implementar una función que reciba un string representando un número real, y convierta su contenido al número que representa. Utilizar el siguiente prototipo:
+
+```c
+float strtof(const char* string);
+```
+
+## Ejercicio 6.13
+Implementar una función que invierta el casing, es decir, los caracteres que se encuentren en mayúsculas los convierta a minúsculas y los que están en minúsculas a mayúsculas. La función deberá retornar la cantidad de caracteres convertidos. Utilizar el siguiente prototipo:
+
+```c
+int str_invertir_case(char* string);
+```
+
+## Ejercicio 6.14
 Implementar una función que reciba un string e invierta el orden de sus caracteres. Utilizar el siguiente prototipo:
 
 ```c
-void invertir(char* string);
+void str_invertir(char* string);
 ```
 
 **Ejemplo:**
 ```
-               __________
-              |          |
-("batman") -->| invertir |--> "namtab"
-              |__________|
+               ______________
+              |              |
+("batman") -->| str_invertir |--> "namtab"
+              |______________|
 ```
 
-## Ejercicio 6.13
+## Ejercicio 6.15
+Implementar una función que reciba un string y dos caracteres. La función deberá reemplazar las apariciones del primer caracter en el string por el segundo. Se deberá retornar la cantidad de veces que se reemplazó el caracter. Utilizar el siguiente prototipo:
+
+```c
+int str_reemplazar(char* string, char caracter_original, char caracter_nuevo);
+```
+
+## Ejercicio 6.16
 Implementar una función que reciba un string y devuelva `1` si el mismo es palíndromo, caso contrario devolverá `0`. Utilizar el siguiente prototipo:
 
 ```c
@@ -120,27 +141,6 @@ int es_palindromo(const char* string);
 ```
 
 **Ayuda:** Un palíndromo es una palabra o frase que se lee igual en un sentido que en otro. Si se trata de números en lugar de letras, se llama capicúa.
-
-## Ejercicio 6.14
-Implementar una función que reciba un string representando un número entero, y convierta su contenido al número que representa. Utilizar el siguiente prototipo:
-
-```c
-int str_to_int(const char* string);
-```
-
-## Ejercicio 6.15
-Implementar una función que reciba un string representando un número real, y convierta su contenido al número que representa. Utilizar el siguiente prototipo:
-
-```c
-float str_to_float(const char* string);
-```
-
-## Ejercicio 6.16
-Implementar una función que reciba un string y dos caracteres. La función deberá reemplazar las apariciones del primer caracter en el string por el segundo. Se deberá retornar la cantidad de veces que se reemplazó el caracter. Utilizar el siguiente prototipo:
-
-```c
-int string_reemplazar(char* string, char caracter_original, char caracter_nuevo);
-```
 
 ## Ejercicio 6.17
 Implementar una función que cambie la extensión original del nombre de un archivo por una nueva. Utilizar el siguiente prototipo:
@@ -185,7 +185,7 @@ int a_morse(char caracter, char* codigo_morse);
 ## Ejercicio 6.21
 Las fechas se expresan en varios formatos distintos, siendo dos de los más comunes `"21/09/98"` y `"21 de Septiembre de 1998"`.
 
-Implementar una función que reciba una fecha en el primer formato (`"01/09/98"`) y devuelva la fecha en el segundo formato (`"21 de Septiembre de 1998"`). De poder realizar la conversión devolverá `1`, en caso contrario devolverá `0`. Utilizar el siguiente prototipo:
+Implementar una función que reciba una fecha en el primer formato (`"21/09/98"`) y devuelva la fecha en el segundo formato (`"21 de Septiembre de 1998"`). De poder realizar la conversión devolverá `1`, caso contrario devolverá `0`. Utilizar el siguiente prototipo:
 
 ```c
 int convertir_fecha_a_letras(const char* fecha_en_numeros, char* fecha_en_letras);
@@ -194,7 +194,7 @@ int convertir_fecha_a_letras(const char* fecha_en_numeros, char* fecha_en_letras
 ## Ejercicio 6.22
 Las fechas se expresan en varios formatos distintos, siendo dos de los más comunes `"21 de Septiembre de 1998"` y `"21/09/98"`
 
-Implementar una función que reciba una fecha en el primer formato (`"21 de Septiembre de 1998"`) y devuelva la fecha en el segundo formato (`"01/09/98"`). De poder realizar la conversión devolverá `1`, en caso contrario devolverá `0`. Utilizar el siguiente prototipo:
+Implementar una función que reciba una fecha en el primer formato (`"21 de Septiembre de 1998"`) y devuelva la fecha en el segundo formato (`"21/09/98"`). De poder realizar la conversión devolverá `1`, caso contrario devolverá `0`. Utilizar el siguiente prototipo:
 
 ```c
 int convertir_fecha_a_numeros(const char* fecha_en_letras, char* fecha_en_numeros);
