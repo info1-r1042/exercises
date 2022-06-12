@@ -18,9 +18,7 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
-**Importante:** Recordá validar **siempre** que se reciben la cantidad de argumentos esperados. En caso contrario, el programa finalizará sin efectuar operación alguna y retornará el valor **`1`**.
-
-<br>
+**Importante:** Recordá validar **siempre** que se reciben la cantidad de argumentos esperados. En caso contrario, el programa finalizará sin efectuar operación alguna y retornará el valor `1`.
 
 ## Ejercicio 8.1
 Desarrollá un programa que imprima por pantalla todos los argumentos recibidos, uno por línea.
@@ -39,26 +37,22 @@ Desarrollá un programa que reciba como argumento un número entre el 30 y el 99
 
 **Ejemplo:**
 ```
-$ ./app 47
+$ ./numbers 47
 47: Cuarenta y siete
 ```
 
 ## Ejercicio 8.6
-Desarrollá un programa que imprima los argumentos recibidos:
+Desarrollá un programa que imprima los argumentos recibidos pero teniendo en cuenta que si el primer parámetro del programa es `-r`, entonces los deberá mostrar en orden inverso.
 
+**Ejemplo:**
 ```
-$ ./app Ser o "no ser," "esa es" "la cuestion"
+$ ./printer Ser o "no ser," "esa es" "la cuestion"
 Ser
 o
 no ser,
 esa es
 la cuestion
-```
-
-Pero teniendo en cuenta que si el primer parámetro del programa es **`-r`**, entonces los muestra al revés:
-
-```
-$ ./app -r Ser o "no ser," "esa es" "la cuestion"
+$ ./printer -r Ser o "no ser," "esa es" "la cuestion"
 la cuestion
 esa es
 no ser,
@@ -67,17 +61,17 @@ Ser
 ```
 
 ## Ejercicio 8.7
-Desarrollá un programa que al recibir como argumento el string `IP:PUERTO`, imprima cada string (`IP` y `PUERTO`) en líneas diferentes.
+Desarrollá un programa que al recibir como argumento el string `IP:PUERTO`, imprima los strings `IP` y `PUERTO` en líneas diferentes.
 
 **Ejemplo:**
 ```
-$ ./app 172.16.4.205:1234
+$ ./network 172.16.4.205:1234
 La IP es: 172.16.4.205
 El puerto es: 1234
 ```
 
 ## Ejercicio 8.8
-Desarrollá un programa que generará muestras aleatorias en un intervalo dado por el usuario. El programa debe recibir como argumentos el inicio del intervalo, `Xi`, el fin del intervalo, `Xf`, y la cantidad de muestras a generar, `n`.
+Desarrollá un programa que genere muestras aleatorias en un intervalo dado por el usuario. El programa debe recibir como argumentos el inicio del intervalo, `Xi`, el fin del intervalo, `Xf`, y la cantidad de muestras a generar, `n`.
 
 **Ejemplo:**
 ```
@@ -95,7 +89,7 @@ $ ./sampler -3 2.65 10
 ```
 
 ## Ejercicio 8.9
-Desarrollá un programa que reciba como argumento un string e imprima por pantalla el string cifrado utilizando el algoritmo ROT13 (ver https://es.wikipedia.org/wiki/ROT13).
+Desarrollá un programa que reciba como argumento un string e imprima por pantalla el string cifrado utilizando el algoritmo [ROT13](https://es.wikipedia.org/wiki/ROT13).
 
 **Ejemplo:**
 ```
@@ -104,7 +98,7 @@ ubyn
 ```
 
 ## Ejercicio 8.10
-En este ejercicio, la función de cada argumento estará dada por las banderas (`flags`) en la línea de comandos. Modificá el programa del ejercicio 8.8 para que reciba los argumentos utilizando las siguientes banderas:
+En este ejercicio, la función de cada argumento estará dada por las banderas (`flags`) en la línea de comandos. Desarrollá una versión modificada del programa del ejercicio 8.8 para que reciba los argumentos utilizando las siguientes banderas:
 
 - **-a** comienzo del intervalo
 - **-b** fin del intervalo
@@ -115,8 +109,6 @@ Las banderas deben poder aparecer en cualquier orden, por lo que las siguientes 
 
 ```
 $ ./sampler -a -3 -b 2.65 -n 10
-$ ./sampler -b 2.65 -a -3 -n 10
-$ ./sampler -n 10 -b 2.65 -a -3
 2.0422
 1.6900
 -1.0428
@@ -127,6 +119,10 @@ $ ./sampler -n 10 -b 2.65 -a -3
 -0.0568
 -2.3125
 -2.6120
+$ ./sampler -b 2.65 -a -3 -n 10
+...
+$ ./sampler -n 10 -b 2.65 -a -3
+...
 $ ./sampler -h
 NOMBRE
        sampler - genera lotes de números pseudo-aleatorios
@@ -135,7 +131,7 @@ SINOPSIS
        sampler [-a A] [-b B] [-n N] [-h]
 
 DESCRIPCIÓN
-       Generar un lote de N números pseudo-aleatorios en el intervalo
+       Genera un lote de N números pseudo-aleatorios en el intervalo
        [A,B). La distribución muestreada es U[A,B).
 
 OPCIONES
