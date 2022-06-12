@@ -131,6 +131,29 @@ Utilizar el siguiente prototipo:
 int obtener_estado(const char* tablero);
 ```
 
+## Ejercicio 7.10
+Implementar una función que genere oraciones de forma aleatoria. Se deberán usar cuatro arreglos de punteros a char llamados `articulo`, `sustantivo`, `verbo` y `preposicion`. La función deberá crear una oración seleccionando una palabra al azar de cada uno de los arreglos en el siguiente orden: 
+
+```
+artículo > sustantivo > verbo > preposición > artículo > sustantivo
+```
+
+Los strings que deben utilizar para el armado de oraciones son:
+
+| Artículo | Sustantivo | Verbo   | Preposición |
+|:--------:|:----------:|:-------:|:-----------:|
+| el       | niño       | manejo  | hacia       |
+| un       | perro      | salto   | desde       |
+| uno      | gato       | corrio  | sobre       |
+| algun    | pueblo     | camino  | debajo      |
+| ningun   | auto       | esquivo | entre       |
+
+Conforme se seleccione cada palabra, la misma deberá ser concatenada con las palabras anteriores en un string lo suficientemente extenso para contener toda la oración. Tener en cuenta que las palabras deben estar separadas por un espacio. Utilizar el siguiente prototipo:
+
+```c
+void generar_oracion(char* oracion);
+```
+
 ## Referencias 
 Algunos ejercicios fueron obtenidos y adaptados de:
 - Guía de Trabajos Prácticos 2011 - Informática I - Departamento de Electrónica - UTN FRBA

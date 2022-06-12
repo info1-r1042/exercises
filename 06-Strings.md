@@ -213,76 +213,35 @@ Implementar una función que codifique una frase usando el cifrado César. Utili
 void cifrar_cesar(const char* frase_original, char* frase_codificada);
 ```
 
+## Ejercicio 6.24
+Implementar una función que reciba un string que contenga tres campos, en formato [CSV](https://es.wikipedia.org/wiki/Valores_separados_por_comas). La función deberá retornar **por referencia** los tres strings extraídos. La función deberá retornar `ERROR_DE_PARSEO` (`1`) si ocurrió algún error, y `EXITO` (`0`) en caso contrario. Utilizar el siguiente prototipo:
 
+```c
+int split_csv(const char* string_csv, char* campo_1, char* campo_2, char* campo_3);
+```
 
+**Ejemplo:**
+```
+                     ___________
+                    |           |
+("uno,dos,tres") -->| split_csv |-->("uno", "dos", "tres")
+                    |___________|
+```
 
+## Ejercicio 6.25
+Implementá una función que reciba tres strings y retorne **por referencia** un string en formato [CSV](https://es.wikipedia.org/wiki/Valores_separados_por_comas) uniendo todos los strings, agregando el caracter delimitador entre ellos (`','`). La función deberá retornar `ERROR_DE_PARSEO` (`1`) si ocurrió algún error, y `EXITO` (`0`) en caso contrario. Utilizar el siguiente prototipo:
 
+```c
+int join_csv(const char* campo_1, const char* campo_2, const char* campo_3, char* string_csv);
+```
 
-
-
-
-
-
-
-## Ejercicio 6.18
-Escriba un programa que ayude al usuario a realizar conversiones sencillas y especificar que tipo de conversiones desea realizar. <br>
-Para ello el usuario deberá especificar los nombres de las unidades(metros, millas, pulgadas, etc) que desea usar y, el programa deberá responder a preguntas sencillas como:<br>
-¿Cuántos metros hay en una milla?<br>
-¿Cuántas millas hay en dos yardas?<br>
-
-**Nota:** Tenga encuenta que en este caso sólo son válidas las medidas de longitud presentadas a continuación. En cualquier otro caso, el programa deberá informar que no es posible realizar dicha conversión.
-
-| medida    | equivalente en metros | fórmula para pasar de metro a la nueva medida:                        | 
-|:--------: |:--------------:|:---------:|
-|    milla  | 1609 metros    |para obtener un resultado aproximado, multiplica el valor de longitud por 1609| 
-|    pie    | 0.3048 metros  |para obtener un resultado aproximado, divide el valor de longitud entre 3,281 |
-|    pulgada|  0.0254 metros |divide el valor de longitud entre 39,37                                       |
-
-- Realice una función con el prototipo <b> int es_valida(char*) </b> que recibirá la pregunta del usuario y validará si la misma tiene medidas válidas de conversión. De ser válida devuelve 1, si no, devuelve 0.
-- Luego deberá realizar funciones que conviertan de una unidad a otra, tenga en cuenta trabajar con variables flotantes.
-
-
-
-## Ejercicio 6.21
-Escriba un programa que use la generación de números aleatorios para crear oraciones.<br> Se deberán usar cuatro arrays apuntadores a char llamados: articulo, sustantivo, verbo y preposicion. El programa deberá crear una oración seleccionando una palabra al azar de cada uno de los arrays en el orden siguiente: <br>
-1)articulo, 2) sustantivo, 3)verbo, 4)preposicion, 5)articulo y 6) sustantivo.<br>
-Conforme se seleccione cada palabra, deberá ser concatenada con las palabras anteriores en un string lo suficientemente extenso para contener toda la oración.<br>
-Las palabras deben estar separadas por un espacio y el programa deberá generar diez oraciones de este tipo.
-<br> 
-Los strings que deben utilizar para el armado de oraciones son:<br>
-|     Artículo    |   Sustantivo |   Verbo | Preposición |
-|:----------------|:------------:|:-------:|-----------:|
-| el              |       niño   |  manejo |      hacia  |
-| un              |    perro     |  salto  | desde       |
-| uno             |    gato      |  corrio |   sobre     |
-| algun           |    pueblo    |camino   |    debajo   |
-| ningun          |    auto      |esquivo  |    entre    |
-
-**Nota:** Utilizar el siguiente prototipo para la función generadora de oraciones: <b>int gen_oracion(char *)</b>. Devuelve 1 si logra hacer la oración ó 0 si no lo logra y, recibe una cadena donde se irán concatenando las palabras.
-<br><br>
-
-## Ejercicio 6.22
-Realizar un programa que reciba tres números enteros y luego proceda a realizar un sorteo. Se deberá sortear veinte veces y, cada vez que aparezca algún número elegido por el usuario, deberá irse armando la palabra <b>BINGO</b>.<br>
-Se deberá informar el número que sale sorteado y, en caso de que salga algún número elegido por el usuario, se debe mostrar en pantalla las letras del BINGO que se completaron hasta el momento.<br> 
-De completarse la palabra el usuario recibirá un mensaje de felicitación por haber conseguido el BINGO.<br>
-- Realizar una función <b>int sorteo(int , int, int)</b> que reciba los números del usuario y retorne 1 de poder hacer el sorteo, 0 si hubo algún error ó 2 de haberse conseguido el BINGO. 
-- Realizar otra función <b> void felicitacion() </b> que imprima por pantalla la felicitación de haber conseguido el BINGO.
-
-**Nota:** Los números a trabajar deberán encontrarse entre el 0 y el 10 además, para la realización del sorteo puede usar la función rand().
-
-## Ejercicio 6.23
-Escribir un programa que le pida a tres alumnos: el apellido, número de legajo (entero de 8 cifras) y la nota de un examen. A continuación se deberá mostrar la información en 3 cadenas de caracteres. El orden deberá ser: legajo, apellido y nota de examen. Las lineas deberán mostrarse de menor a mayor según el número de legajo. Por ejemplo,<br>
-
-|  legajo | apellido | nota |
-|:----: |:----:|:----:|
-|  1634804 | Levi    | 6 |
-|  1736500 | Herrera | 9 |
-|  1757843 | Potter  | 7 |
-
-**Nota:** Usar el siguiente prototipo: <b>int validador_personas(char *, char *,char *)</b> para corroborar que las notas ingresadas sean váidas (del 1 al 10), que los legajos tengan 7 cifras enteras y además, que los nombres tengan 20 caracteres o menos. De ser válido la función retorna 1, de no serlo retorna 0. 
-<br>Si el ingreso es válido use una función <b> void mostrar_personas(char *,char *, char *)</b> para comparar los legajos y luego imprimir por pantalla la información en el orden ya mecionado.
-
-***Ayuda:*** Para comparar los legajos puede usar la función <b>atoi()</b>. Puede consultar el man para más información sobre dicha función.
+**Ejemplo:**
+```
+                          __________
+                         |          |
+("uno", "dos", "tres")-->| join_csv |-->"uno,dos,tres"
+                         |__________|
+```
 
 ## Referencias 
 Algunos ejercicios fueron obtenidos y adaptados de:
