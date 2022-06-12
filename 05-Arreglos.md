@@ -97,7 +97,7 @@ Las operaciones soportadas son:
 - Multiplicación (`'*'`)
 - División (`'/'`)
 
-Los ordenes soportados son:
+Los ordenes de operandos soportados son:
 - `ESCALAR_VECTOR` (`0`)
 - `VECTOR_ESCALAR` (`1`)
 
@@ -172,7 +172,7 @@ int esta_apuntando_al_enemigo(const double* vector_mira, const double* vector_en
 ```
 
 ## Ejercicio 5.13
-La función derivada nos da información acerca de la razón de cambio de una función y en el caso de la derivada discreta, nos da información sobre dicha razón de cambio pero aplicado a un conjunto de elementos númericos discretos. En este ejercicio, se pide implementar una función que calcule la derivada discreta (por diferencias finitas) del contenido de un vector de enteros. El cálculo de dicha derivada discreta se realiza de la siguiente manera:
+La función derivada nos da información acerca de la razón de cambio de una función y en el caso de la derivada discreta, nos da información sobre dicha razón de cambio pero aplicado a un conjunto de elementos númericos discretos. En este ejercicio, se pide implementar una función que calcule la derivada discreta (por diferencias finitas) del contenido de un arreglo de enteros. El cálculo de dicha derivada discreta se realiza de la siguiente manera:
 
 ```
 Para x = 0 => (∂f/∂x)[x] = 0
@@ -194,21 +194,21 @@ void derivar(const double* arreglo, int largo, double* derivada);
 ```
 
 ## Ejercicio 5.14
-Implementar una función que permita evaluar una función polinómica en un punto, a partir de un vector de coeficientes y su grado recibidos como parámetros. Utilizar el siguiente prototipo:
+Implementar una función que permita evaluar una función polinómica en un punto, a partir de un arreglo de coeficientes y su grado recibidos como parámetros. Utilizar el siguiente prototipo:
 
 ```c
 double evaluar_polinomio(const double* coeficientes, int grado, double x);
 ```
 
 ## Ejercicio 5.15
-Implementar una función que permita obtener los coeficientes de la función derivada de una función polinómica, a partir de un vector de coeficientes y su grado recibidos como parámetros (si no te acordás las reglas de derivación de polinomios, ver https://www.universoformulas.com/matematicas/analisis/derivada-polinomio/). Utilizar el siguiente prototipo:
+Implementar una función que permita obtener los coeficientes de la función derivada de una función polinómica, a partir de un arreglo de coeficientes y su grado recibidos como parámetros (si no te acordás las reglas de derivación de polinomios, ver https://www.universoformulas.com/matematicas/analisis/derivada-polinomio/). Utilizar el siguiente prototipo:
 
 ```c
 void derivar_polinomio(const double* coeficientes, int grado, double* coeficientes_derivada);
 ```
 
 ## Ejercicio 5.16
-Escribir un programa que genere una tabla con muestras de un polinomio ingresado por teclado. El programa debe pedir al usuario el grado del polinomio, los coeficientes del mismo, el valor del comienzo del intervalo de muestreo, el valor final y la cantidad de muestras (máximo 100). Para ello, implementar una función con el siguiente prototipo:
+Implementar una función que genere una lista con muestras de un polinomio pasado como un arreglo de coeficientes. La función deberá recibir el grado del polinomio, los coeficientes del mismo, el valor del comienzo del intervalo de muestreo, el valor final y la cantidad de muestras (que devolverá en el arreglo de muestras). Utilizar el siguiente prototipo:
 
 ```c
 void muestrear_polinomio(const double* coeficientes, int grado, double inicio, double fin, double* muestras, int cantidad_muestras);
