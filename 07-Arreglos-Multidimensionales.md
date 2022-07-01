@@ -132,7 +132,7 @@ int obtener_estado(const char* tablero);
 ```
 
 ## Ejercicio 7.10
-Implementar una función que genere oraciones de forma aleatoria. Se deberán usar cuatro matrices con palabras llamadas `articulos`, `sustantivos`, `verbos` y `preposiciones`. La función deberá crear una oración seleccionando una palabra al azar de cada uno de las matrices en el siguiente orden:
+Implementar una función que genere oraciones de forma aleatoria. Se deberán usar cuatro matrices con palabras llamadas `articulos`, `sustantivos`, `verbos` y `preposiciones`. La función deberá crear una oración seleccionando una palabra al azar de cada una de las matrices en el siguiente orden:
 
 ```
 artículo > sustantivo > verbo > preposición > artículo > sustantivo
