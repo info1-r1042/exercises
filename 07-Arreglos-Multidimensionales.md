@@ -132,26 +132,19 @@ int obtener_estado(const char* tablero);
 ```
 
 ## Ejercicio 7.10
-Implementar una función que genere oraciones de forma aleatoria. Se deberán usar cuatro matrices con palabras llamadas `articulos`, `sustantivos`, `verbos` y `preposiciones`. La función deberá crear una oración seleccionando una palabra al azar de cada una de las matrices en el siguiente orden:
+El objetivo del juego matemático japonés `sudoku` es rellenar una cuadrícula de 9x9 celdas (81 casillas) dividida en subcuadrículas de 3x3 (también llamadas "cajas" o "regiones") con las cifras del 1 al 9 partiendo de algunos números ya dispuestos en algunas de las celdas. La forma inicial del juego es que sean nueve elementos diferenciados, que no se deben repetir en una misma fila, columna o subcuadrícula.
 
-```
-artículo > sustantivo > verbo > preposición > artículo > sustantivo
-```
+![sudoku](images/sudoku.jpg)
 
-Las palabras que se deben utilizar para el armado de las oraciones son:
+Implementar una función que compruebe si una solución dada es correcta sabiendo que:
 
-| Artículo | Sustantivo | Verbo   | Preposición |
-|:--------:|:----------:|:-------:|:-----------:|
-| el       | niño       | manejo  | hacia       |
-| un       | perro      | salto   | desde       |
-| uno      | gato       | corrio  | sobre       |
-| algun    | pueblo     | camino  | debajo      |
-| ningun   | auto       | esquivo | entre       |
+1. Se deben completar **todas** las casillas con un número comprendido entre el `1` y el `9`.
+1. No puede repetirse ninguna cifra en la misma fila, ni en la misma columna ni en la misma subcuadrícula.
 
-Conforme se obtenga cada palabra, la misma deberá ser concatenada con las palabras anteriores, teniendo en cuenta que las mismas deberán estar separadas por un espacio. Utilizar el siguiente prototipo:
+La función deberá retornar `SOLUCION_VALIDA` (`1`) si la solución es correcta, y `SOLUCION_INVALIDA` (`0`) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
-void generar_oracion(char* oracion);
+int comprobar_sudoku(const int* tablero);
 ```
 
 ## Referencias 
