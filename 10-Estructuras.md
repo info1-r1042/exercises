@@ -1,4 +1,4 @@
-# Guía de Ejercicios 9 - Estructuras
+# Guía de Ejercicios 10 - Estructuras
 
 ```
 Advertencia
@@ -18,13 +18,11 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
-**Importante:** Recordá también que se evaluarán las buenas prácticas de programación con respecto al pedido de memoria. Por lo tanto, ¡no te olvides de **liberar** la memoria pedida! Recordá verificar el uso de memoria con el programa `valgrind` antes de realizar la entrega.
+**Importante:** Recordá que se evaluarán las buenas prácticas de programación con respecto al pedido de memoria. Por lo tanto, ¡no te olvides de **liberar** la memoria pedida! (podés ayudarte del programa `valgrind` para veriﬁcarlo).
 
 Tené en cuenta también que para **todos** los ejercicios, se pide también implementar (y entregar) una función main que demuestre el correcto funcionamiento del módulo.
 
-<br>
-
-## Ejercicio 9.1
+## Ejercicio 10.1
 Desde la Subsecretaría de Tecnologías de la Información y Comunicación de la facultad nos solicitan implementar un módulo para el SIU Guaraní que permita almacenar y operar sobre las calificaciones finales obtenidas por los estudiantes. Para ello utilizaremos una estructura con los siguientes campos:
 - Nombre (hasta 25 caracteres).
 - Apellido (hasta 25 caracteres).
@@ -65,7 +63,7 @@ void calificaciones_ordenar(/*Definir*/ calificaciones, /*Definir*/ cantidad_cal
 
 **Importante:** ¡No te olvides de implementar un main que demuestre el correcto funcionamiento del módulo!
 
-## Ejercicio 9.2
+## Ejercicio 10.2
 Estamos armando nuestra propia versión de Twitter, y para ello debemos ser capaces de almacenar los Tweets que cada uno de los usuario desee postear. Para ello utilizaremos una estructura con los siguientes campos:
 - Nombre (hasta 25 caracteres).
 - Usuario (hasta 25 caracteres).
@@ -108,7 +106,7 @@ void tweets_ordenar(/*Definir*/ tweets, /*Definir*/ cantidad_tweets, /*Definir*/
 
 **Importante:** ¡No te olvides de implementar un main que demuestre el correcto funcionamiento del módulo!
 
-## Ejercicio 9.3
+## Ejercicio 10.3
 Para un proyecto de un grupo de investigación de robótica de la facultad se nos pide implementar un módulo que permita almacenar y operar sobre las poses obtenidas de un robot. La pose de un robot nos dice su ubicación, tanto en dos o tres dimensiones y también su orientación. Los mensajes de pose recibidos poseen el siguiente formato:
 
 ```c
@@ -169,7 +167,7 @@ void poses_ordenar(/*Definir*/ poses, /*Definir*/ cantidad_poses);
 
 **Importante:** ¡No te olvides de implementar un main que demuestre el correcto funcionamiento del módulo!
 
-## Ejercicio 9.4
+## Ejercicio 10.4
 Un familiar que posee una inmobiliaria nos pide implementar un módulo que permita almacenar y operar sobre las distintas publicaciones de alquiler y venta de inmuebles. Para ello utilizaremos una estructura con los siguientes campos:
 - Operación (Alquiler o Venta).
 - Tipo (Casa, Departamento o PH).
@@ -214,7 +212,7 @@ void publicaciones_ordenar(/*Definir*/ publicaciones, /*Definir*/ cantidad_publi
 
 **Importante:** ¡No te olvides de implementar un main que demuestre el correcto funcionamiento del módulo!
 
-## Ejercicio 9.5
+## Ejercicio 10.5
 Un banco nos pide implementar un módulo que permita almacenar y operar sobre las distintas cuentas bancarias de un grupo de clientes. Para ello utilizaremos una estructura con los siguientes campos:
 - Nombre (hasta 25 caracteres).
 - Usuario (hasta 25 caracteres).
@@ -260,7 +258,7 @@ void cuentas_imprimir(/*Definir*/ cuentas, /*Definir*/ cantidad_cuentas);
 
 **Importante:** ¡No te olvides de implementar un main que demuestre el correcto funcionamiento del módulo!
 
-## Ejercicio 9.6
+## Ejercicio 10.6
 Un amigo dueño de una concesionaria de autos nos pide implementar un módulo que permita almacenar y operar sobre las distintas operaciones de venta de automóviles. Para ello utilizaremos una estructura con los siguientes campos:
 - Marca (hasta 25 caracteres).
 - Modelo (hasta 25 caracteres).
