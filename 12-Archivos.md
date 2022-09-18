@@ -1,4 +1,4 @@
-# Guía de Ejercicios 11 - Archivos
+# Guía de Ejercicios 12 - Archivos
 
 ```
 Advertencia
@@ -18,7 +18,7 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
-## Ejercicio 1.1
+## Ejercicio 12.1
 Escriba un programa que lea el archivo de texto “diodo.txt” y determine:<br>
 - Cantidad total de palabras<br>
 - Cantidad de veces que aparece la palabra “diodo”. <br>
@@ -28,24 +28,24 @@ permita buscar cualquier palabra e indique cuántas veces la encontró.
 
 **Nota:** La función no debe distinguir entre mayúsculas y minúsculas.
 
-## Ejercicio 1.2
+## Ejercicio 12.2
 Escribir una función que reciba un archivo de texto dado y proceda a encriptar su contenido. El contenido encriptado lo escribirá en un archivo nuevo llamado ENCODED.txt que, de ya existir deberá sobreescribirse.<br>
 
 **Nota:** El algoritmo de cifrado a utilizar será muy sencillo: a cada caracter comprendido entre la a y la z, se le sumará 13.
 
-## Ejercicio 1.3
+## Ejercicio 12.3
 Escribir una función que reciba un archivo de texto dado y proceda a desencriptar su contenido. El contenido desencriptado lo escribirá en un archivo nuevo llamado DECODED.txt que, de ya existir deberá sobreescribirse.<br>
 
 **Nota:** El algoritmo de descifrado a utilizar será muy sencillo: a cada caracter comprendido entre la a y la z, se le restará 13.
 
-## Ejercicio 1.4
+## Ejercicio 12.4
 Realizar un programa que reciba por argumentos del main un archivo de texto y dos palabras. Luego el programa analizará el contenido del archivo y reemplazará todos aquellos lugares donde aparezca la primer palabra por la segunda.
 
-## Ejercicio 1.5
+## Ejercicio 12.5
 Realice una función que reciba un archivo de texto y elimine tanto las vocales o las consonantes del mismo segun se indique en sus argumentos.
 <br><br>
 
-## Ejercicio 1.6
+## Ejercicio 12.6
 Usando la siguiente estructura:<br>
 > struct gente<br>
 > {<br>
@@ -61,7 +61,7 @@ Realizar un programa que lea un archivo de texto .csv(separado por comas) y guar
 ***Ayuda:*** Para 'parcear' el archivo puede usar las funciones fread(); y strtok();
 <br><br>
 
-## Ejercicio 1.7
+## Ejercicio 12.7
 Usando la siguiente estructura:<br>
 > struct gente<br>
 > {<br>
@@ -75,7 +75,7 @@ Realizar un programa que lea un archivo de texto .csv(separado por comas) y guar
 **Nota:** El rango de calificaciónes posibles es del 0 al 10, siendo el 0 un ausente.
 <br><br><br><br><br><br><br><br>
 
-## Ejercicio 1.8
+## Ejercicio 12.8
 Utilizando la siguiente estructura:<br>
 
 > typedef struct Cliente{<br>
@@ -87,10 +87,10 @@ Utilizando la siguiente estructura:<br>
 Se nos pide desarrollar un módulo de software que implemente la funcionalidad de poder volcar un arreglo estático de estructuras en un archivo binario y viceversa. Para esto se debera realizar un programa que solicite al usuario que ingrese datos de clientes por consola (como máximo 10), y luego se deberán grabar dichos datos en un archivo binario. Luego se deberá borrar el contenido del arreglo, y se volverá a cargar la información desde el archivo, para finalizar imprimiéndose en pantalla todos
 los datos cargados.
 
-## Ejercicio 1.9
+## Ejercicio 12.9
 Escribir un programa llamado mi-cat que tenga una funcionalidad similar a la del programa cat de Linux. Es decir, debe recibir el nombre de un archivo de texto como argumento por líınea de comandos (argumento del main), y debe imprimir a continuación su contenido en la consola.
 
-## Ejercicio 1.10
+## Ejercicio 12.10
 Para simplificar el desarrollo de una aplicación de login de usuarios, nos piden implementar las siguientes funciones:<br>
 
 - int leer linea(FILE* fp, char* linea); 

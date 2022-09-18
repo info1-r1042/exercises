@@ -1,4 +1,4 @@
-# Guía de Ejercicios 10 - Estructuras Avanzadas
+# Guía de Ejercicios 11 - Estructuras de Datos
 
 ```
 Advertencia
