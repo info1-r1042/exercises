@@ -210,44 +210,62 @@ void imprimir(Cola* cola);
 void destruir(Cola* cola);
 ```
 
-## Ejercicio 11.3
-Implemente un programa que permita manejar la lista de espera de un servicio telefonico:<br> 
-Al ingresar por consola la letra C, se podrá ingresar un nuevo cliente que poseerá: un nombre, apellido, edad y, el sistema le entregará un <i>número de atención</i>.<br>
-Al ingresar por consola la letra A, el sistema permite 'atender' a los clientes, con lo cual al ingresar algún numero de atención el sistema muestra los datos de dicho cliente, si existe, y da la opcion de retirarlo de la lista.
-
-## Ejercicio 11.5
-Impremente un código que resuelva el juego de las Torres de Hanoi para 3 discos utilizando <b>pilas</b>.
-Para esto, es necesario tener tres pilas: una origen, en la cual se encuentran los 3 discos al inicio; una auxiliar y; una pila de destino que, es en la que deberán encontrarse los discos al finalizar el programa.<br><br>
-![Procedimiento para resolver las torres de hanoi de tres discos](/home/milagros/Documents/info1/imagenes/Hanoi.jpg)
-<br>
-<u>Reglas del juego:</u><br>
-- Sólo se puede mover un disco a la vez, cada disco se moverá cuando se oprima la tecla 's'.
-- Un disco de mayor tamaño no puede quedar arriba de uno más chico
-- Solo se puede desplazar el disco que se encuentre arriba de los otros en una pila
-<br>
-
-## Ejercicio 11.6
-Para este ejercicio deberá desarrollar un programa que simule un colectivo, donde entran y salen pasajeros del mismo, como si fuera una cola. Para dicho programa usted tendrá un menú en el cual tendrá dos opciones para el chofer: abrir la puerta delantera y, abrir la puerta trasera.<br>
-Al abrir la puerta delantera los pasajeros ingresan a la cola mientras que al abrir la puerta trasera los pasajeros salen. En este caso el tiempo de ingreso y egreso será de un segundo, por ejemplo: luego de que ingrese un pasajero, pasará un segundo antes de que ingrese otro a no ser que se salga del menu de ingreso(se cierre la primer puerta).<br>
-Considere a cada pasajero como una estructura de datos que contiene un nombre y un número de ticket. El nombre deberá generarse aleatoriamente mientras que el ticket es un contador que se reinicia con el inicio del programa.
-
-**Nota:** Solo es posible abrir una puerta por vez y el colectivo tiene un límite de 30 pasajeros. <br><br>
-![imagen de colectivo](/home/milagros/Documents/info1/imagenes/bondi.jpeg)
-
 ## Ejercicio 11.7
-Escribir una programa que simule el trabajo de una torre de control de un aeropuerto con una sola pista de aterrizaje. El avión debe considerarse como una estructura que contenga el nombre del avión(por ejemplo 'AR156') y su condicion de espera.<br>
-Deberá generar 4 funciones: <br>
--  Para avisar que un avión quiere aterrizar en la pista: nuevo_arribo('AR156');//recibe el nombre del avion
--  Para avisar que un avión quiere despegar de la pista: nueva_partida('AR156');//recibe el nombre del avion
--  Para mostrar el estado actual de espera (los que esperan para aterrizar y los que esperan para despegar): ver_estado();
--  Para asignar la pista a un avión: asignar_pista();//quita un avión de la cola
+Desarrollá un módulo para el manejo de pilas de números enteros. Dicho módulo deberá utilizar internamente estructuras autorreferenciadas para almacenar la información. Utilizá los siguientes prototipos:
 
-**Nota:** Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. 
+```c
+typedef struct Nodo {
+    int valor;
+    struct Nodo* siguiente;
+} Nodo;
 
-![imagen de torre de control](/home/milagros/Documents/info1/imagenes/torre_control.jpeg)
+typedef enum Status {
+    EXITO = 0,
+    ERROR_FALLA_DE_MEMORIA,
+    ERROR_PILA_VACIA
+} Status;
+
+// @brief Inserta un elemento en la pila.
+Status push(Nodo** pila, int elemento);
+
+// @brief Quita un elemento de la pila.
+Status pop(Nodo** pila, int* elemento);
+
+// @brief Devuelve el valor del próximo elemento a quitar de la pila (sin quitarlo).
+Status espiar(Nodo* pila, int* elemento);
+
+// @brief Imprime el contenido de la pila.
+void imprimir(Nodo* pila);
+```
+
+## Ejercicio 11.8
+Desarrollá un módulo para el manejo de colas de números enteros. Dicho módulo deberá utilizar internamente estructuras autorreferenciadas para almacenar la información. Utilizá los siguientes prototipos:
+
+```c
+typedef struct Nodo {
+    int valor;
+    struct Nodo* siguiente;
+} Nodo;
+
+typedef enum Status {
+    EXITO = 0,
+    ERROR_FALLA_DE_MEMORIA,
+    ERROR_COLA_VACIA
+} Status;
+
+// @brief Inserta un elemento en la cola.
+Status encolar(Nodo** cola, int elemento);
+
+// @brief Quita un elemento de la cola.
+Status desencolar(Nodo** cola, int* elemento);
+
+// @brief Devuelve el valor del próximo elemento a quitar de la cola (sin quitarlo).
+Status espiar(Nodo* cola, int* elemento);
+
+// @brief Imprime el contenido de la cola.
+void imprimir(Nodo* cola);
+```
 
 ## Referencias 
 Algunos ejercicios fueron obtenidos y adaptados de:
 - Guía de Trabajos Prácticos 2011 - Informática I - Departamento de Electrónica - UTN FRBA
-- Guía de Trabajos Prácticos 2019 - Informática I - Departamento de Electrónica - UTN FRBA
-- Guía de Ejercicios - Algoritmos y Programación I - UBA FIUBA
