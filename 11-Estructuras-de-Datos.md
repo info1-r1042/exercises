@@ -26,12 +26,14 @@ Tené en cuenta también que para **todos** los ejercicios, se pide también imp
 Desarrollá un módulo para el manejo de arreglos dinámicos (vectores). Utilizá los siguientes prototipos:
 
 ```c
-typedef struct Nodo {
+typedef struct Dato
+{
     char usuario[30];
     int edad;
-} Nodo;
+} Dato;
 
-typedef enum Status {
+typedef enum Status
+{
     EXITO = 0,
     ERROR_FALLA_DE_MEMORIA,
     ERROR_POSICION_INVALIDA,
@@ -39,84 +41,105 @@ typedef enum Status {
 } Status;
 
 // @brief Agrega un elemento en el vector.
-Status agregar(Nodo** vector, int* largo, Nodo nodo);
+Status agregar(Dato** vector, int* largo, Dato dato);
 
 // @brief Quita el elemento presente en la posición indicada.
-Status eliminar(Nodo** vector, int* largo, int posicion);
+Status eliminar(Dato** vector, int* largo, int posicion);
 
 // @brief Devuelve el valor del elemento presente en la posición indicada.
-Status obtener(Nodo* vector, int largo, int posicion, Nodo* nodo);
+Status obtener(Dato* vector, int largo, int posicion, Data* dato);
 
 // @brief Imprime el contenido del vector.
-Status imprimir(Nodo* vector, int largo);
+Status imprimir(Dato* vector, int largo);
+
+// @brief Destruye el vector.
+void destruir(Dato** vector, int* largo);
 ```
 
 ## Ejercicio 11.2
 Desarrollá un módulo para el manejo de pilas. Dicho módulo deberá utilizar un arreglo dinámico (vector) para almacenar la información. Utilizá los siguientes prototipos:
 
 ```c
-typedef struct Nodo {
+typedef struct Dato
+{
     char usuario[30];
     int edad;
-} Nodo;
+} Dato;
 
-typedef enum Status {
+typedef enum Status
+{
     EXITO = 0,
     ERROR_FALLA_DE_MEMORIA,
     ERROR_PILA_VACIA
 } Status;
 
 // @brief Inserta un elemento en la pila.
-Status push(Nodo** pila, int* largo, Nodo nodo);
+Status push(Dato** pila, int* largo, Dato dato);
 
 // @brief Quita un elemento de la pila.
-Status pop(Nodo** pila, int* largo, Nodo* nodo);
+Status pop(Dato** pila, int* largo, Dato* dato);
 
 // @brief Devuelve el valor del próximo elemento a quitar de la pila (sin quitarlo).
-Status espiar(Nodo* pila, int largo, Nodo* nodo);
+Status espiar(Dato* pila, int largo, Dato* dato);
 
 // @brief Imprime el contenido de la pila.
-void imprimir(Nodo* pila, int largo);
+void imprimir(Dato* pila, int largo);
+
+// @brief Destruye la pila.
+void destruir(Dato** pila, int* largo);
 ```
 
 ## Ejercicio 11.3
 Desarrollá un módulo para el manejo de colas. Dicho módulo deberá utilizar un arreglo dinámico (vector) para almacenar la información. Utilizá los siguientes prototipos:
 
 ```c
-typedef struct Nodo {
+typedef struct Dato
+{
     char usuario[30];
     int edad;
-} Nodo;
+} Dato;
 
-typedef enum Status {
+typedef enum Status
+{
     EXITO = 0,
     ERROR_FALLA_DE_MEMORIA,
     ERROR_COLA_VACIA
 } Status;
 
 // @brief Inserta un elemento en la cola.
-Status encolar(Nodo** cola, int* largo, Nodo nodo);
+Status encolar(Dato** cola, int* largo, Dato dato);
 
 // @brief Quita un elemento de la cola.
-Status desencolar(Nodo** cola, int* largo, Nodo* nodo);
+Status desencolar(Dato** cola, int* largo, Dato* dato);
 
 // @brief Devuelve el valor del próximo elemento a quitar de la cola (sin quitarlo).
-Status espiar(Nodo* cola, int largo, Nodo* nodo);
+Status espiar(Dato* cola, int largo, Dato* dato);
 
 // @brief Imprime el contenido de la cola.
-void imprimir(Nodo* cola, int largo);
+void imprimir(Dato* cola, int largo);
+
+// @brief Destruye la cola.
+void destruir(Dato** cola, int* largo);
 ```
 
 ## Ejercicio 11.4
-Desarrollá un módulo para el manejo de arreglos dinámicos (vectores) de números enteros. Para mejorar la abstracción y el encapsulamiento del módulo, la información correspondiente al vector deberá estar contenida en una estructura creada para tal fin. Utilizá los siguientes prototipos:
+Desarrollá un módulo para el manejo de arreglos dinámicos (vectores). Para mejorar la abstracción y el encapsulamiento del módulo, la información correspondiente al vector deberá estar contenida en una estructura creada para tal fin. Utilizá los siguientes prototipos:
 
 ```c
-typedef struct Vector {
-    int* elementos;
+typedef struct Dato
+{
+    char usuario[30];
+    int edad;
+} Dato;
+
+typedef struct Vector
+{
+    Dato* datos;
     int largo;
 } Vector;
 
-typedef enum Status {
+typedef enum Status
+{
     EXITO = 0,
     ERROR_FALLA_DE_MEMORIA,
     ERROR_POSICION_INVALIDA,
@@ -127,13 +150,13 @@ typedef enum Status {
 Vector* crear();
 
 // @brief Agrega un elemento en el vector.
-Status agregar(Vector* vector, int elemento);
+Status agregar(Vector* vector, Dato dato);
 
 // @brief Quita el elemento presente en la posición indicada.
 Status eliminar(Vector* vector, int posicion);
 
 // @brief Devuelve el valor del elemento presente en la posición indicada.
-Status obtener(Vector* vector, int* elemento, int posicion);
+Status obtener(Vector* vector, int posicion, Dato* dato);
 
 // @brief Imprime el contenido del vector.
 void imprimir(Vector* vector);
@@ -143,15 +166,23 @@ void destruir(Vector* vector);
 ```
 
 ## Ejercicio 11.5
-Desarrollá un módulo para el manejo de pilas de números enteros. Dicho módulo deberá utilizar internamente un arreglo dinámico (vector) para almacenar la información. Para mejorar la abstracción y el encapsulamiento del módulo, la información correspondiente a la pila deberá estar contenida en una estructura creada para tal fin. Utilizá los siguientes prototipos:
+Desarrollá un módulo para el manejo de pilas. Dicho módulo deberá utilizar internamente un arreglo dinámico (vector) para almacenar la información. Para mejorar la abstracción y el encapsulamiento del módulo, la información correspondiente a la pila deberá estar contenida en una estructura creada para tal fin. Utilizá los siguientes prototipos:
 
 ```c
-typedef struct Pila {
-    int* elementos;
+typedef struct Dato
+{
+    char usuario[30];
+    int edad;
+} Dato;
+
+typedef struct Pila
+{
+    Dato* datos;
     int largo;
 } Pila;
 
-typedef enum Status {
+typedef enum Status
+{
     EXITO = 0,
     ERROR_FALLA_DE_MEMORIA,
     ERROR_PILA_VACIA
@@ -161,13 +192,13 @@ typedef enum Status {
 Pila* crear();
 
 // @brief Inserta un elemento en la pila.
-Status push(Pila* pila, int elemento);
+Status push(Pila* pila, Dato dato);
 
 // @brief Quita un elemento de la pila.
-Status pop(Pila* pila, int* elemento);
+Status pop(Pila* pila, Dato* dato);
 
 // @brief Devuelve el valor del próximo elemento a quitar de la pila (sin quitarlo).
-Status espiar(Pila* pila, int* elemento);
+Status espiar(Pila* pila, Dato* dato);
 
 // @brief Imprime el contenido de la pila.
 void imprimir(Pila* pila);
@@ -177,15 +208,23 @@ void destruir(Pila* pila);
 ```
 
 ## Ejercicio 11.6
-Desarrollá un módulo para el manejo de colas de números enteros. Dicho módulo deberá utilizar internamente un arreglo dinámico (vector) para almacenar la información. Para mejorar la abstracción y el encapsulamiento del módulo, la información correspondiente a la cola deberá estar contenida en una estructura creada para tal fin. Utilizá los siguientes prototipos:
+Desarrollá un módulo para el manejo de colas. Dicho módulo deberá utilizar internamente un arreglo dinámico (vector) para almacenar la información. Para mejorar la abstracción y el encapsulamiento del módulo, la información correspondiente a la cola deberá estar contenida en una estructura creada para tal fin. Utilizá los siguientes prototipos:
 
 ```c
-typedef struct Cola {
-    int* elementos;
+typedef struct Dato
+{
+    char usuario[30];
+    int edad;
+} Dato;
+
+typedef struct Cola
+{
+    Dato* datos;
     int largo;
 } Cola;
 
-typedef enum Status {
+typedef enum Status
+{
     EXITO = 0,
     ERROR_FALLA_DE_MEMORIA,
     ERROR_COLA_VACIA
@@ -195,13 +234,13 @@ typedef enum Status {
 Cola* crear();
 
 // @brief Inserta un elemento en la cola.
-Status encolar(Cola* cola, int elemento);
+Status encolar(Cola* cola, Dato dato);
 
 // @brief Quita un elemento de la cola.
-Status desencolar(Cola* cola, int* elemento);
+Status desencolar(Cola* cola, Dato* dato);
 
 // @brief Devuelve el valor del próximo elemento a quitar de la cola (sin quitarlo).
-Status espiar(Cola* cola, int* elemento);
+Status espiar(Cola* cola, Dato* dato);
 
 // @brief Imprime el contenido de la cola.
 void imprimir(Cola* cola);
@@ -211,59 +250,81 @@ void destruir(Cola* cola);
 ```
 
 ## Ejercicio 11.7
-Desarrollá un módulo para el manejo de pilas de números enteros. Dicho módulo deberá utilizar internamente estructuras autorreferenciadas para almacenar la información. Utilizá los siguientes prototipos:
+Desarrollá un módulo para el manejo de pilas. Dicho módulo deberá utilizar internamente estructuras autorreferenciadas para almacenar la información. Utilizá los siguientes prototipos:
 
 ```c
-typedef struct Nodo {
-    int valor;
+typedef struct Dato
+{
+    char usuario[30];
+    int edad;
+} Dato;
+
+typedef struct Nodo
+{
+    Dato dato;
     struct Nodo* siguiente;
 } Nodo;
 
-typedef enum Status {
+typedef enum Status 
+{
     EXITO = 0,
     ERROR_FALLA_DE_MEMORIA,
     ERROR_PILA_VACIA
 } Status;
 
 // @brief Inserta un elemento en la pila.
-Status push(Nodo** pila, int elemento);
+Status push(Nodo** pila, Dato dato);
 
 // @brief Quita un elemento de la pila.
-Status pop(Nodo** pila, int* elemento);
+Status pop(Nodo** pila, Dato* dato);
 
 // @brief Devuelve el valor del próximo elemento a quitar de la pila (sin quitarlo).
-Status espiar(Nodo* pila, int* elemento);
+Status espiar(Nodo* pila, Dato* dato);
 
 // @brief Imprime el contenido de la pila.
 void imprimir(Nodo* pila);
+
+// @brief Destruye la pila.
+void destruir(Nodo** pila);
 ```
 
 ## Ejercicio 11.8
-Desarrollá un módulo para el manejo de colas de números enteros. Dicho módulo deberá utilizar internamente estructuras autorreferenciadas para almacenar la información. Utilizá los siguientes prototipos:
+Desarrollá un módulo para el manejo de colas. Dicho módulo deberá utilizar internamente estructuras autorreferenciadas para almacenar la información. Utilizá los siguientes prototipos:
 
 ```c
-typedef struct Nodo {
-    int valor;
+typedef struct Dato
+{
+    char usuario[30];
+    int edad;
+} Dato;
+
+typedef struct Nodo
+{
+    Dato dato;
     struct Nodo* siguiente;
 } Nodo;
 
-typedef enum Status {
+typedef enum Status
+{
     EXITO = 0,
     ERROR_FALLA_DE_MEMORIA,
     ERROR_COLA_VACIA
 } Status;
 
 // @brief Inserta un elemento en la cola.
-Status encolar(Nodo** cola, int elemento);
+Status encolar(Nodo** cola, Dato dato);
 
 // @brief Quita un elemento de la cola.
-Status desencolar(Nodo** cola, int* elemento);
+Status desencolar(Nodo** cola, Dato* dato);
 
 // @brief Devuelve el valor del próximo elemento a quitar de la cola (sin quitarlo).
-Status espiar(Nodo* cola, int* elemento);
+Status espiar(Nodo* cola, Dato* dato);
 
 // @brief Imprime el contenido de la cola.
 void imprimir(Nodo* cola);
+
+// @brief Destruye la cola.
+void destruir(Nodo** cola);
 ```
 
 ## Referencias 
