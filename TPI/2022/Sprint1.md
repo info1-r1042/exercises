@@ -24,7 +24,7 @@ El código fuente entregado por un grupo debe ser escrito en su totalidad por di
 Crear el proyecto en el repositorio y generar el primer commit. Adaptar el template para el grupo en particular, modiﬁcando donde sea necesario con la información del grupo.
 
 ## Tarea 1.2 - Manejo de Usuarios
-Para la persistencia de la información de los usuarios (`usuario` y `contraseña`) se utilizará un archivo binario.
+Para la persistencia de la información de los usuarios (`usuario` y `contraseña`) se utilizará un archivo binario llamado `usuarios.db`.
 
 Para el manejo de la información de los usuarios se utilizarán arreglos dinámicos (vectores) de estructuras. Por una cuestión de performance, toda la información de los usuarios se debe cargar en memoria en un arreglo dinámico desde el archivo binario al comenzar la ejecución del programa, y las operaciones sobre usuarios deberán realizarse sobre dicho arreglo. Tener en cuenta que se debe actualizar el archivo siempre que el arreglo sufra modiﬁcaciones, para mantener ambos siempre sincronizados.
 
@@ -42,7 +42,7 @@ Si el usuario selecciona la opción `Registrarse`, se deberá solicitar al usuar
 Si el usuario selecciona la opción `Salir`, se terminará la ejecución.
 
 ## Tarea 1.4 - Manejo de Canciones
-Desarrollar un módulo de menú de usuario que se utilizará cuando el usuario ya ingresó al sistema (luego de un login o registro exitoso), y desplegará un menú de selección. Las opciones deben ser **`"Listar canciones"`** y **`"Filtrar canciones"`**.
+Desarrollar un módulo de menú de usuario que se utilizará cuando el usuario ya ingresó al sistema (luego de un login o registro exitoso), y desplegará un menú de selección. Las opciones deben ser **`"Listar canciones"`**, **`"Filtrar canciones"`** y **`"Salir"`**.
 
 Si el usuario selecciona la opción `Listar canciones`, el programa relevará todos las canciones presentes en la base de datos y le mostrará al usuario un listado enumerado de las mismas, por ejemplo:
 
@@ -63,7 +63,9 @@ Profugos,Soda Stereo,Signos,New wave,1986
 ...
 ```
 
-Si el usuario selecciona la opción `Filtrar canciones`, el comportamiento será similar a `Listar canciones` pero se le deberá preguntar previamente al usuario si se desea filtrar el listado por `Artista` o `Género` y el valor de filtro a aplicar.
+Si el usuario selecciona la opción `Filtrar canciones`, el comportamiento será similar a `Listar canciones` pero se le deberá preguntar previamente al usuario si se desea filtrar el listado por `Artista` o `Género` y el valor del filtro a aplicar.
+
+Si el usuario selecciona la opción `Salir`, se terminará la ejecución.
 
 ## [Opcional] Tarea 1.5 - Reproducción local
 Se debe incorporar una nueva opción al menú de usuario, la cual se llamará **`"Escuchar canción"`**.
