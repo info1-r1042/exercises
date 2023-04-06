@@ -1,4 +1,4 @@
-# Guía de Ejercicios 1 - Introducción y Estructuras de Decisión
+# Guía de Ejercicios 1 - Introducción al lenguaje C y Estructuras de Decisión
 
 ```
 Advertencia
