@@ -95,6 +95,55 @@ Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al u
 - Si debe votar y de no hacerlo le corresponde una multa económica (personas entre 18 y 70 años).
 - Si debe votar, pero no le corresponde una sanción en caso de no hacerlo (mayores de 65 años o personas de 16/17 años).
 
+## Ejercicio 0.26
+Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota pregunte cuál es la temperatura actual. Al recibir el dato, `Scratch Cat` debe responder con el valor en Celsius y su equivalente en Kelvin en una misma oración. Recordar que `°C = °K - 273`.
+
+## Ejercicio 0.27
+Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota pregunte cuál es la temperatura actual. Al recibir el dato, `Scratch Cat` debe responder con el valor en Celsius y su equivalente en Farenheit en una misma oración. Recordar que `°C = 5/9 * (°F - 32)`.
+
+## Ejercicio 0.28
+Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota pida un tiempo en horas, minutos y segundos para calcular y anunciar la cantidad de segundos totales utilizando a la mascota de la plataforma, `Scratch Cat`.
+
+**Ayuda:** Considere pedir la informacion por separado!
+
+## Ejercicio 0.29
+Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota `Scratch Cat` pida el radio de un circulo, y muestre durante 5 segundos cada uno de los siguientes valores:
+- El diámetro.
+- El perímetro.
+- El área.
+
+Al finalizar, `Scratch Cat` debe realizar un saludo final.
+
+**Ayuda** Considere $\pi$=3.14 (ingresar con punto en scratch)
+
+## Ejercicio 0.30
+Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota pida un caracter. Segun el caracter, `Scratch Cat` debe indicar la casa real correspondiente:
+
+```
+si el carácter es 'A':
+    "House Arryn"
+si el carácter es 'B':
+    "House Baratheon"
+si el carácter es 'F':
+    "House Frey"
+si el carácter es 'G':
+    "House Greyjoy"
+si el carácter es 'L':
+    "House Lannister"
+si el carácter es 'S':
+    "House Stark"
+si el carácter es 'T':
+    "House Targaryen"
+si es otro caracter:
+    "No lo conozco"
+```
+
+## Ejercicio 0.31
+Implementar en [Scratch](https://scratch.mit.edu/) un prgrama que permita realizar operaciones matemáticas entre dos operandos. Para ello `Scratch Cat` debe pedir dos valores reales y el símbolo de la operación (`+`,`-`,`/`,`*`). Luego, `Scratch Cat` deberá anunciar los datos, la operación y el resultado con el siguiente formato:
+
+**(Operando1) (Operacion) (Operando2) = (Resultado)**. 
+
+
 ## Referencias
 Algunos ejercicios obtenidos y adaptados de:
 - Guía de Introducción a la Programación 2022 - Informática I - Departamento de Electrónica - UTN FRBA
