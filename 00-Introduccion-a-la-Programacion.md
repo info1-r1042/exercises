@@ -80,6 +80,21 @@ Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al u
 ## Ejercicio 0.21
 Implementar en [Scratch](https://scratch.mit.edu/) un programa que dado un número real devuelva su valor absoluto. Al terminar se deberán mostrar el valor obtenido, utilizando a la mascota de la plataforma, `Scratch Cat`.
 
+## Ejercicio 0.22
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario la cantidad de kilómetros recorridos por un auto y el tiempo que le tomó realizar dicho recorrido, luego calcule la velocidad media del auto y determine si le correspondería pagar la multa por exceder la velocidad media de 120km/h. Validar que ambos valores ingresados sean mayores a cero. Al terminar se deberán mostrar los valores obtenidos, utilizando a la mascota de la plataforma, `Scratch Cat`.
+
+## Ejercicio 0.23
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario dos números enteros y luego obtenga la sumatoria de todos los números enteros que se encuentran dentro del rango ingresado. Validar que el segundo número ingresado sea mayor que el primero y que ambos números sean menores que 1000. Al terminar se deberá mostrar el valor obtenido, utilizando a la mascota de la plataforma, `Scratch Cat`.
+
+## Ejercicio 0.24
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario dos números enteros (`a` y `b`) y luego obtenga el resultado de elevar `a` a la `b`. Al terminar se deberán mostrar el valor obtenido, utilizando a la mascota de la plataforma, `Scratch Cat`.
+
+## Ejercicio 0.25
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario su edad. Se pide determinar e informar por pantalla, utilizando a la mascota de la plataforma, `Scratch Cat`:
+- Si no está habilitado para votar (menores de 16 años).
+- Si debe votar y de no hacerlo le corresponde una multa económica (personas entre 18 y 70 años).
+- Si debe votar, pero no le corresponde una sanción en caso de no hacerlo (mayores de 65 años o personas de 16/17 años).
+
 ## Referencias
 Algunos ejercicios obtenidos y adaptados de:
 - Guía de Introducción a la Programación 2022 - Informática I - Departamento de Electrónica - UTN FRBA
