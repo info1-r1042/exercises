@@ -168,11 +168,8 @@ Implementar en [Scratch](https://scratch.mit.edu/) un prgrama que permita realiz
 
 **(Operando1) (Operacion) (Operando2) = (Resultado)**. 
 
+
 ## Ejercicio 0.35
-Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario que ingrese un número e informe el valor absoluto utilizando a la mascota de la plataforma, `Scratch Cat`.
-
-
-## Ejercicio 0.36
 Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario que ingrese pendiente y ordenada al origen de dos rectas diferentes, e informe el punto de interseccion utilizando a la mascota de la plataforma, `Scratch Cat`.
 
 
