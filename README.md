@@ -4,14 +4,11 @@
 
 This repository contains the coding exercises for Introduction to Computer Science at National Technological University - Buenos Aires.
 
-## Authors
-
- * [Javier Balloffet](https://github.com/jballoffet) ([National Technological University - Buenos Aires](https://www.frba.utn.edu.ar/en/))
- * [Milagros Rojas](https://github.com/mirojas) ([National Technological University - Buenos Aires](https://www.frba.utn.edu.ar/en/))
-
 ## Maintainers
 
  * [Javier Balloffet](https://github.com/jballoffet) ([National Technological University - Buenos Aires](https://www.frba.utn.edu.ar/en/))
+ * [Lucía Sucunza](https://github.com/luciasucunza) ([National Technological University - Buenos Aires](https://www.frba.utn.edu.ar/en/))
+ * [Marcos Goyret](https://github.com/mgoyret) ([National Technological University - Buenos Aires](https://www.frba.utn.edu.ar/en/))
 
 ## License
 
