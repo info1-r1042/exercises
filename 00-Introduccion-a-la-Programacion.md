@@ -66,16 +66,16 @@ Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al u
 Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario tres notas e identifique la mayor de ellas. Validar que las notas estén entre `1` y `10`. Al terminar se deberán mostrar el valor obtenido, utilizando a la mascota de la plataforma, `Scratch Cat`.
 
 ## Ejercicio 0.18
-Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario un par de valores reales `(x,y)`, las cuales representarán las coordenadas cartesianas de un punto del plano `R2`. Se pide determinar e informar por pantalla, utilizando a la mascota de la plataforma, `Scratch Cat`:
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario un par de valores reales `(x,y)`, las cuales representarán las coordenadas cartesianas de un punto en el plano `R2`. Se pide determinar e informar por pantalla, utilizando a la mascota de la plataforma, `Scratch Cat`:
 - Si el punto se encuentra en el origen (ambos valores iguales a 0).
-- Si el punto se encuentra sobre un eje (sólo si **no** está ubicado en el origen).
-- A cuál cuadrante pertenece el punto (sólo si **no** está ubicado sobre **ninguno** de los ejes **ni** sobre el origen).
+- Si el punto se encuentra sobre un eje (sólo si **no** está ubicado en el origen), y si el mismo es el eje `x` o `y`.
+- Si el punto se encuentra en un cuadrante (sólo si **no** está ubicado sobre **ninguno** de los ejes **ni** sobre el origen), y si el mismo es el cuadrante `I`, `II`, `III` o `IV`.
 
 ## Ejercicio 0.19
 Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario tres valores reales, correspondientes a las longitudes de los lados de un triángulo, y luego informe si los números ingresados conforman realmente un triángulo y si el triángulo ingresado es equilátero, isósceles o escaleno. Al terminar se deberán mostrar los valores obtenidos, utilizando a la mascota de la plataforma, `Scratch Cat`.
 
 ## Ejercicio 0.20
-Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario tres valores reales, correspondientes a las longitudes de los lados de un triángulo, y luego informe si los números ingresados conforman realmente un triángulo y si el triángulo ingresado es rectángulo e indique cual de los valores ingresados es la hipotenusa. Al terminar se deberán mostrar los valores obtenidos, utilizando a la mascota de la plataforma, `Scratch Cat`.
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario tres valores reales, correspondientes a las longitudes de los lados de un triángulo, y luego informe si los números ingresados conforman realmente un triángulo y si el triángulo ingresado es rectángulo e indique cuál de los valores ingresados es la hipotenusa. Al terminar se deberán mostrar los valores obtenidos, utilizando a la mascota de la plataforma, `Scratch Cat`.
 
 ## Ejercicio 0.21
 Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario la cantidad de kilómetros recorridos por una motocicleta y la cantidad de litros de combustible que consumió durante dicho recorrido y luego calcule el consumo de combustible por kilómetro promedio. Validar que ambos valores ingresados sean mayores a cero. Al terminar se deberá mostrar el valor obtenido, utilizando a la mascota de la plataforma, `Scratch Cat`.
@@ -84,7 +84,7 @@ Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al u
 Implementar en [Scratch](https://scratch.mit.edu/) un programa que dado un número real devuelva su valor absoluto. Al terminar se deberán mostrar el valor obtenido, utilizando a la mascota de la plataforma, `Scratch Cat`.
 
 ## Ejercicio 0.23
-Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario la cantidad de kilómetros recorridos por un auto y el tiempo que le tomó realizar dicho recorrido, luego calcule la velocidad media del auto y determine si le correspondería pagar la multa por exceder la velocidad media de 120km/h. Validar que ambos valores ingresados sean mayores a cero. Al terminar se deberán mostrar los valores obtenidos, utilizando a la mascota de la plataforma, `Scratch Cat`.
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario la cantidad de kilómetros recorridos por un auto y el tiempo que le tomó realizar dicho recorrido, luego calcule la velocidad media del auto y determine si le correspondería pagar una multa por exceder la velocidad media de `120 km/h`. Validar que ambos valores ingresados sean mayores a cero. Al terminar se deberán mostrar los valores obtenidos, utilizando a la mascota de la plataforma, `Scratch Cat`.
 
 ## Ejercicio 0.24
 Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario dos números enteros y luego obtenga la sumatoria de todos los números enteros que se encuentran dentro del rango ingresado. Validar que el segundo número ingresado sea mayor que el primero y que ambos números sean menores que 1000. Al terminar se deberá mostrar el valor obtenido, utilizando a la mascota de la plataforma, `Scratch Cat`.
@@ -94,55 +94,55 @@ Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al u
 
 ## Ejercicio 0.26
 Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario su edad. Se pide determinar e informar por pantalla, utilizando a la mascota de la plataforma, `Scratch Cat`:
-- Si no está habilitado para votar (menores de 16 años).
-- Si debe votar y de no hacerlo le corresponde una multa económica (personas entre 18 y 70 años).
-- Si debe votar, pero no le corresponde una sanción en caso de no hacerlo (mayores de 65 años o personas de 16/17 años).
+- Si no está habilitado para votar (personas menores de 16 años).
+- Si está habilitado para votar, y de no hacerlo le corresponde una multa económica (personas de entre 18 y 70 años).
+- Si está habilitado para votar, pero de no hacerlo no le corresponde una multa económica (personas mayores de 70 años o de 16 o 17 años).
 
 ## Ejercicio 0.27
-Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota pregunte cuál es la temperatura actual. Al recibir el dato, `Scratch Cat` debe responder con el valor en Celsius y su equivalente en Kelvin en una misma oración. Recordar que `°C = °K - 273`.
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pregunte cuál es la temperatura actual en grados Celsius. Al recibir el dato, `Scratch Cat` debe responder con el valor en Celsius y su equivalente en Kelvin en una misma oración. Recordar que `°C = °K - 273`.
 
 ## Ejercicio 0.28
-Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota pregunte cuál es la temperatura actual. Al recibir el dato, `Scratch Cat` debe responder con el valor en Celsius y su equivalente en Farenheit en una misma oración. Recordar que `°C = 5/9 * (°F - 32)`.
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pregunte cuál es la temperatura actual en grados Celsius. Al recibir el dato, `Scratch Cat` debe responder con el valor en Celsius y su equivalente en Farenheit en una misma oración. Recordar que `°C = 5/9 * (°F - 32)`.
 
 ## Ejercicio 0.29
-Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota pida un tiempo en horas, minutos y segundos para calcular y anunciar la cantidad de segundos totales utilizando a la mascota de la plataforma, `Scratch Cat`.
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida un tiempo en horas, minutos y segundos y luego compute e informe la cantidad de segundos totales equivalentes.
 
-**Ayuda:** Considere pedir la informacion por separado!
+**Ayuda:** Se sugiere pedir la información de horas, minutos y segundos por separado.
 
 ## Ejercicio 0.30
-Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota `Scratch Cat` pida el radio de un circulo, y muestre durante 5 segundos cada uno de los siguientes valores:
-- El diámetro.
-- El perímetro.
-- El área.
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida el radio de un círculo, y luego compute y muestre durante 5 segundos cada uno de los siguientes valores:
+- Su diámetro.
+- Su perímetro.
+- Su área.
 
 Al finalizar, `Scratch Cat` debe realizar un saludo final.
 
-**Ayuda** Considere $\pi$=3.14 (ingresar con punto en scratch)
+**Ayuda:** Considere `pi = 3.14` (utilizar punto decimal).
 
 ## Ejercicio 0.31
-Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota `Scratch Cat` pida el radio de una esfera, y muestre durante 5 segundos cada uno de los siguientes valores:
-- El diámetro.
-- El volumen.
-- El área.
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida el radio de una esfera, y luego compute y muestre durante 5 segundos cada uno de los siguientes valores:
+- Su diámetro.
+- Su volumen.
+- Su área.
 
 Al finalizar, `Scratch Cat` debe realizar un saludo final.
 
-**Ayuda** Considere $\pi$=3.14 (ingresar con punto en scratch)
+**Ayuda:** Considere `pi = 3.14` (utilizar punto decimal).
 
 ## Ejercicio 0.32
-Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota `Scratch Cat` pida radio y altura de un cilindro, y muestre durante 5 segundos cada uno de los siguientes valores:
-- El diámetro.
-- El perímetro.
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida el radio y la altura de un cilindro, y luego compute y muestre durante 5 segundos cada uno de los siguientes valores:
+- El diámetro de la base.
+- El perímetro de la base.
 - El área de la base.
 - El volumen del cilindro.
 - El área del cilindro.
 
 Al finalizar, `Scratch Cat` debe realizar un saludo final.
 
-**Ayuda** Considere $\pi$=3.14 (ingresar con punto en scratch)
+**Ayuda:** Considere `pi = 3.14` (utilizar punto decimal).
 
 ## Ejercicio 0.33
-Implementar en [Scratch](https://scratch.mit.edu/) un prgrama en el cual la mascota pida un caracter. Segun el caracter, `Scratch Cat` debe indicar la casa real correspondiente:
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida una letra. Según la letra ingresada, `Scratch Cat` deberá indicar la familia noble correspondiente:
 
 ```
 si el carácter es 'A':
@@ -164,14 +164,14 @@ si es otro caracter:
 ```
 
 ## Ejercicio 0.34
-Implementar en [Scratch](https://scratch.mit.edu/) un prgrama que permita realizar operaciones matemáticas entre dos operandos. Para ello `Scratch Cat` debe pedir dos valores reales y el símbolo de la operación (`+`,`-`,`/`,`*`). Luego, `Scratch Cat` deberá anunciar los datos, la operación y el resultado con el siguiente formato:
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que permita realizar operaciones matemáticas entre dos operandos. Para ello, `Scratch Cat` deberá pedir dos valores reales y el símbolo de la operación (`+`,`-`,`/`,`*`) a efectuar. Luego, `Scratch Cat` deberá anunciar los datos, la operación y el resultado obtenido utilizando el siguiente formato:
 
-**(Operando1) (Operacion) (Operando2) = (Resultado)**. 
-
+```
+(operando1) (operación) (operando2) = (resultado) 
+```
 
 ## Ejercicio 0.35
-Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario que ingrese pendiente y ordenada al origen de dos rectas diferentes, e informe el punto de interseccion utilizando a la mascota de la plataforma, `Scratch Cat`.
-
+Implementar en [Scratch](https://scratch.mit.edu/) un programa que solicite al usuario que ingrese la pendiente y la ordenada al origen de dos rectas, y compute e informe el punto de intersección entre ambas, utilizando a la mascota de la plataforma, `Scratch Cat`.
 
 ## Referencias
 Algunos ejercicios obtenidos y adaptados de:
