@@ -110,7 +110,7 @@ Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mas
 **Ayuda:** Se sugiere pedir la información de horas, minutos y segundos por separado.
 
 ## Ejercicio 0.30
-Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida el radio de un círculo, y luego compute y muestre durante 5 segundos cada uno de los siguientes valores:
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida el radio de un círculo, y luego compute e informecada uno de los siguientes valores:
 - Su diámetro.
 - Su perímetro.
 - Su área.
@@ -120,7 +120,7 @@ Al finalizar, `Scratch Cat` debe realizar un saludo final.
 **Ayuda:** Considere `pi = 3.14` (utilizar punto decimal).
 
 ## Ejercicio 0.31
-Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida el radio de una esfera, y luego compute y muestre durante 5 segundos cada uno de los siguientes valores:
+Implementar en [Scratch](https://scratch.mit.edu/) un programa en el cual la mascota de la plataforma, `Scratch Cat`, pida el radio de una esfera, y luego compute e informe cada uno de los siguientes valores:
 - Su diámetro.
 - Su volumen.
 - Su área.
