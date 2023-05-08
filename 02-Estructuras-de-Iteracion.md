@@ -82,10 +82,10 @@ Escribir un programa que acumule números enteros ingresados por teclado hasta q
 
 **Nota:** El cero es la condición de finalización con lo cual no debe ser tomado en cuenta para el cálculo del promedio.
 
-## Ejercicio 2.11 
+## Ejercicio 2.11
 Escribir un programa que reciba dos numeros enteros positivos. Si el primer número es par deberá calcular el factorial del mismo pero si es impar deberá calcula la potencia del primero elevado por el segundo.
 
-## Ejercicio 2.12 
+## Ejercicio 2.12
 Escribir un programa que imprima por pantalla todas las fichas del juego dominó, sin repetir ninguna.
 
 ## Ejercicio 2.13
@@ -93,7 +93,7 @@ Escribir un programa que reciba un número binario de 4 bits y luego imprima su 
 
 **Nota:**  El primer bit ingresado debe considerarse como el bit más significativo (MSB).
 
-**Ayuda:** 
+**Ayuda:**
 
 | 1° | 2° | 3° | 4° | Salida por stdout |
 |---|---|---|---|---|
@@ -114,8 +114,8 @@ Un tirador realiza 10 disparos a un blanco cuyo centro coincide con el origen de
 Escribir un programa que reciba por teclado pares de valores no nulos X e Y, que representan las coordenadas rectangulares de distintos puntos en el plano. El fin de datos se indica con X e Y iguales a cero.
 
 Se pide determinar e informar por pantalla:
-- a) Cantidad de puntos que pertenecen a cada cuadrante. 
-- b) Sumatoria de las distancias al origen de los puntos pertenecientes al primer cuadrante.
+- Cantidad de puntos que pertenecen a cada cuadrante.
+- Sumatoria de las distancias al origen de los puntos pertenecientes al primer cuadrante.
 
 ## Ejercicio 2.16
 El valor aproximado del número de Euler (`e`) se puede obtener con la siguiente fórmula:
@@ -123,7 +123,7 @@ El valor aproximado del número de Euler (`e`) se puede obtener con la siguiente
 ```
 e = 1 + 1/1! + 1/2! + 1/3! + 1/4! + 1/5! + ...
 ```
- 		
+
 Escribir un programa que calcule el valor aproximado de `e` mediante un ciclo repetitivo que termine cuando la diferencia entre dos aproximaciones sucesivas difiera en menos de 10 elevado a la -9.
 
 ## Ejercicio 2.17
@@ -159,9 +159,9 @@ Escribir un programa que tome un número entero en base 10 (decimal) y lo muestr
 Se tienen 5 sensores de temperatura, que registran 15 temperaturas distintas cada uno. Esas temperaturas se ingresan de a una por vez, primero las 15 del primer sensor, luego las 15 del segundo, y así sucesivamente.
 
 Terminado el ingreso de datos, se deberá mostrar por pantalla:
-- a) Temperatura promedio detectada por cada sensor.
-- b) Máxima temperatura registrada por cada sensor.
-- c) Número de sensor que registró la temperatura máxima.
+- Temperatura promedio detectada por cada sensor.
+- Máxima temperatura registrada por cada sensor.
+- Número de sensor que registró la temperatura máxima.
 
 ## Ejercicio 2.22
 Escribir un programa que permita determinar el máximo y el mínimo de un conjunto de valores numéricos reales ingresados por stdin (sin almacenar la totalidad de los valores leídos). A tal efecto debe ingresarse primero la cantidad esperada de elementos a procesar, y luego el lote de datos de a uno por vez. Finalizado el ingreso de datos, mostrar el resultado por stdout.
@@ -170,11 +170,11 @@ Escribir un programa que permita determinar el máximo y el mínimo de un conjun
 Escribir un programa que pida el número de legajo (entero de 8 cifras) y la calificación de un examen de los estudiantes de un curso. El fin de ingreso de datos se indica con el ingreso de un legajo igual a cero.
 
 El programa deberá informar:
-- a) Cantidad de estudiantes del curso.
-- b) Promedio de las calificaciones. 
-- c) Cantidad de estudiantes aprobados (se aprueba con calificación igual o mayor que 6).
-- d) Mayor calificación.
-- e) La cantidad de estudiantes por cada calificación conceptual, según la siguiente tabla:
+- Cantidad de estudiantes del curso.
+- Promedio de las calificaciones.
+- Cantidad de estudiantes aprobados (se aprueba con calificación igual o mayor que 6).
+- Mayor calificación.
+- La cantidad de estudiantes por cada calificación conceptual, según la siguiente tabla:
 
 | Calificación conceptual | Calificación numérica |
 |---|---|
@@ -216,7 +216,7 @@ Ingrese el alto: 5
 #####
 ```
 
-## Referencias 
+## Referencias
 Algunos ejercicios fueron obtenidos y adaptados de:
 - Guía de Trabajos Prácticos 2011 - Informática I - Departamento de Electrónica - UTN FRBA
 - Guía de Ejercicios - Algoritmos y Programación I - UBA FIUBA
