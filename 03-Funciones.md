@@ -243,7 +243,7 @@ El argumento `tipo_contestacion` indicará si se deberá generar una respuesta p
 **Ayuda:** Se sugiere hacer uso de la función estándar `rand()` para generar la secuencia pseudoaleatoria. Ver `man 3 rand`.
 
 ## Ejercicio 3.18
-Implementar una función que dado un número entero que recibe como argumento, imprima dicho número en su equivalente en números romanos. Los números que recibe la función representarán años con lo cual en este caso el intervalo de ingreso posible es del 1 al 2022. Utilizar el siguiente prototipo:
+Implementar una función que dado un número entero que recibe como argumento, imprima dicho número en su equivalente en números romanos. Los números que recibe la función representarán años con lo cual en este caso el intervalo de ingreso posible es del 1 al 2023. Utilizar el siguiente prototipo:
 
 ```c
 void a_romanos(int anio);
@@ -282,7 +282,7 @@ int abs(int n);
 ```
 
 ## Ejercicio 3.20
-Implementar una función que dada una dimensión imprima la matriz identidad de esa dimensión. Utilizar el siguiente prototipo:
+Implementar una función que dada una dimensión imprima una matriz identidad de dicha dimensión. Utilizar el siguiente prototipo:
 
 ```c
 void matriz_identidad(int dimension);
