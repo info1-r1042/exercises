@@ -123,7 +123,7 @@ int raices_cuadratica(float a, float b, float c, float* x1, float* x2);
 La función deberá devolver `RAICES_REALES_Y_DISTINTAS` (`0`), `RAICES_REALES_E_IGUALES` (`1`), `RAICES_COMPLEJAS` (`2`) o `ERROR` (`3`), según corresponda.
 
 ## Ejercicio 4.12
-Implementar una función que calcule la mínima cantidad de billetes (moneda peso argentino) con la que se puede alcanzar un determinado monto. Por ejemplo, `2320 ARS = 2*1000 ARS + 3*100 ARS + 1*20 ARS`. Utilizar el siguiente prototipo:
+Implementar una función que dado un monto de dinero (moneda peso argentino), calcule la mínima cantidad de billetes con los que se puede obtener dicho valor. Por ejemplo, `2320 ARS = 2*1000 ARS + 3*100 ARS + 1*20 ARS`. Utilizar el siguiente prototipo:
 
 ```c
 int cantidad_billetes(int monto, int* billetes_1000, int* billetes_500, int* billetes_200, int* billetes_100, int* billetes_50, int* billetes_20, int* billetes_10);
