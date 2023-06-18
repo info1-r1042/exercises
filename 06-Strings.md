@@ -16,11 +16,9 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 | Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
 | Bibliotecas específicas (.a)    |                                                   |
 
-El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
-
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
-**Importante:** Recordar validar **siempre** que no se reciben punteros **`NULL`**. En dicho caso, la función deberá retornar sin efectuar operación alguna y en caso de tener que retornar algún valor, devolverá el valor `-1`.
+**Importante:** El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
 
 ## Ejercicio 6.1
 Implementar tu propia version de la función `strlen` de la biblioteca estándar `string`. Utilizar el siguiente prototipo:
@@ -203,16 +201,16 @@ int convertir_fecha_a_numeros(const char* fecha_en_letras, char* fecha_en_numero
 ```
 
 ## Ejercicio 6.23
-En criptografía, el cifrado César, también conocido como cifrado por desplazamiento o ROT13, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.
+En criptografía, el [cifrado ROT13](https://es.wikipedia.org/wiki/ROT13) ("rotar 13 posiciones") es un sencillo cifrado César utilizado para ocultar un texto sustituyendo cada letra por la letra que está trece posiciones por delante en el alfabeto. A se convierte en N, B se convierte en O y así hasta la M, que se convierte en Z. Luego la secuencia se invierte: N se convierte en A, O se convierte en B y así hasta la Z, que se convierte en M.
 
 Entonces, para codificar un mensaje, simplemente se debe buscar cada letra de la línea del texto original y escribir la letra correspondiente en la línea codificada. Para decodificarlo se debe hacer lo contrario.
 
-![Cesar](images/cesar.jpg)
+![rot13](images/rot13.jpg)
 
-Implementar una función que codifique una frase usando el cifrado César. Utilizar el siguiente prototipo:
+Implementar una función que codifique una frase utilizando el cifrado ROT13. Utilizar el siguiente prototipo:
 
 ```c
-void cifrar_cesar(const char* frase_original, char* frase_codificada);
+void cifrar_rot13(const char* frase_original, char* frase_codificada);
 ```
 
 ## Ejercicio 6.24
@@ -231,7 +229,7 @@ int split_csv(const char* string_csv, char* campo_1, char* campo_2, char* campo_
 ```
 
 ## Ejercicio 6.25
-Implementá una función que reciba tres strings y retorne **por referencia** un string en formato [CSV](https://es.wikipedia.org/wiki/Valores_separados_por_comas) uniendo todos los strings, agregando el caracter delimitador entre ellos (`','`). La función deberá retornar `ERROR_DE_PARSEO` (`1`) si ocurrió algún error, y `EXITO` (`0`) en caso contrario. Utilizar el siguiente prototipo:
+Implementar una función que reciba tres strings y retorne **por referencia** un string en formato [CSV](https://es.wikipedia.org/wiki/Valores_separados_por_comas) uniendo todos los strings, agregando el caracter delimitador entre ellos (`','`). La función deberá retornar `ERROR_DE_PARSEO` (`1`) si ocurrió algún error, y `EXITO` (`0`) en caso contrario. Utilizar el siguiente prototipo:
 
 ```c
 int join_csv(const char* campo_1, const char* campo_2, const char* campo_3, char* string_csv);
