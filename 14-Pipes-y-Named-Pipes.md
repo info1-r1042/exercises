@@ -1,4 +1,4 @@
-# Guía de Ejercicios 13 - Pipes y Named Pipes
+# Guía de Ejercicios 14 - Pipes y Named Pipes
 
 ```
 Advertencia
