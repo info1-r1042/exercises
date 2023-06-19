@@ -16,9 +16,9 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 | Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
 | Bibliotecas específicas (.a)    |                                                   |
 
-El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
-
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
+
+**Importante:** El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
 
 ## Ejercicio 12.1
 Implementar un programa que genere dos procesos, uno padre y uno hijo. El proceso padre debe imprimir la leyenda `"Soy el proceso padre, mi PID es ... y el PID de mi hijo es ..."`. El proceso hijo debe imprimir la leyenda `"Soy el proceso hijo, mi PID es ... y el PID de mi padre es ..."`. Se deben realizar tres versiones de este programa, una donde el proceso hijo finalice **correctamente**, una donde el proceso hijo quede en estado **zombie** y una donde el proceso hijo quede en estado **huérfano**.

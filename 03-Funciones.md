@@ -16,9 +16,9 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 | Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
 | Bibliotecas específicas (.a)    |                                                   |
 
-El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
-
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
+
+**Importante:** El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
 
 ## Ejercicio 3.1
 Implementar una función que calcule `x` elevado a la `y` sin utilizar la función estándar `pow()`. La función debe admitir exponentes enteros positivos, negativos, o de valor `0`. Utilizar el siguiente prototipo:

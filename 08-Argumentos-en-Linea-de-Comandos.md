@@ -16,11 +16,11 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 | Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
 | Bibliotecas específicas (.a)    |                                                   |
 
-El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
-
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
-**Importante:** Recordá validar **siempre** que se reciben la cantidad de argumentos esperados. En caso contrario, el programa finalizará sin efectuar operación alguna y retornará el valor `1`.
+**Importante:** El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
+
+**Nota:** Recordá validar **siempre** que se reciben la cantidad de argumentos en línea de comandos esperados. En caso contrario, el programa finalizará sin efectuar operación alguna y retornará el valor `1`.
 
 ## Ejercicio 8.1
 Desarrollá un programa que imprima por pantalla todos los argumentos recibidos, uno por línea.

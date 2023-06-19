@@ -16,11 +16,9 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 | Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
 | Bibliotecas específicas (.a)    |                                                   |
 
-El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
-
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
 
-**Importante:** Recordar validar **siempre** que no se reciben punteros **`NULL`**. En dicho caso, la función deberá retornar sin efectuar operación alguna y en caso de tener que retornar algún valor, devolverá el valor `-1`.
+**Importante:** El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
 
 ## Ejercicio 4.1
 Implementar una función que incremente en `1` el valor de una variable entera pasada por referencia. Utilizar el siguiente prototipo:

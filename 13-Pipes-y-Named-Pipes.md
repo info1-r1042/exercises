@@ -16,9 +16,9 @@ El código fuente entregado por un estudiante debe ser escrito en su totalidad p
 | Archivos encabezado/header (.h) | Archivos ejecutables (programa, app, a.out, etc.) |
 | Bibliotecas específicas (.a)    |                                                   |
 
-El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
-
 Se deben entregar los ejercicios en un archivo zip (usar template como ayuda para el formato).
+
+**Importante:** El código entregado debe compilar y linkear **sin warnings ni errores**, utilizando el flag `-Wall`.
 
 ## Ejercicio 13.1
 Implementar un programa que genere dos procesos, uno padre y uno hijo. Dichos procesos deben comunicarse a través de dos pipes (debido a que son unidireccionales). El proceso padre debe enviarle al proceso hijo la leyenda `"Luke, yo soy tu padre"` a lo que el proceso hijo debe responder `"Noooooooooo!!!"`. Colocar los printf() que considere necesario para demostrar el correcto funcionamiento de la comunicación. 
