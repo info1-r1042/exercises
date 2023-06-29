@@ -23,19 +23,19 @@ Se deben entregar los ejercicios en un archivo zip (usar template como ayuda par
 **Nota:** Recordá validar **siempre** que se reciben la cantidad de argumentos en línea de comandos esperados. En caso contrario, el programa finalizará sin efectuar operación alguna y retornará el valor `1`.
 
 ## Ejercicio 8.1
-Desarrollá un programa que imprima por pantalla todos los argumentos recibidos, uno por línea.
+Desarrollar un programa que imprima por pantalla todos los argumentos recibidos, uno por línea.
 
 ## Ejercicio 8.2
-Desarrollá un programa que reciba como argumento un string e imprima su longitud, à la `strlen()`.
+Desarrollar un programa que reciba como argumento un string e imprima su longitud, à la `strlen()`.
 
 ## Ejercicio 8.3
-Desarrollá un programa que reciba como argumentos dos strings e imprima el resultado de su comparación lexicográfica, como lo haría la función `strcmp()` o `strcasecmp()`.
+Desarrollar un programa que reciba como argumentos dos strings e imprima el resultado de su comparación lexicográfica, como lo haría la función `strcmp()` o `strcasecmp()`.
 
 ## Ejercicio 8.4
-Desarrollá un programa que reciba como argumentos dos números enteros e imprima el resultado de la operación módulo entre ambos.
+Desarrollar un programa que reciba como argumentos dos números enteros e imprima el resultado de la operación módulo entre ambos.
 
 ## Ejercicio 8.5
-Desarrollá un programa que reciba como argumento un número entre el 30 y el 99 y presente por pantalla el número en letras. Recordá validar que el número se encuentre en ese rango.
+Desarrollar un programa que reciba como argumento un número entre el 30 y el 99 y presente por pantalla el número en letras. Recordá validar que el número se encuentre en ese rango.
 
 **Ejemplo:**
 ```
@@ -44,7 +44,7 @@ $ ./numbers 47
 ```
 
 ## Ejercicio 8.6
-Desarrollá un programa que imprima los argumentos recibidos pero teniendo en cuenta que si el primer parámetro del programa es `-r`, entonces los deberá mostrar en orden inverso.
+Desarrollar un programa que imprima los argumentos recibidos pero teniendo en cuenta que si el primer parámetro del programa es `-r`, entonces los deberá mostrar en orden inverso.
 
 **Ejemplo:**
 ```
@@ -63,7 +63,7 @@ Ser
 ```
 
 ## Ejercicio 8.7
-Desarrollá un programa que al recibir como argumento el string `IP:PUERTO`, imprima los strings `IP` y `PUERTO` en líneas diferentes.
+Desarrollar un programa que al recibir como argumento el string `IP:PUERTO`, imprima los strings `IP` y `PUERTO` en líneas diferentes.
 
 **Ejemplo:**
 ```
@@ -73,7 +73,7 @@ El puerto es: 1234
 ```
 
 ## Ejercicio 8.8
-Desarrollá un programa que genere muestras aleatorias en un intervalo dado por el usuario. El programa debe recibir como argumentos el inicio del intervalo, `Xi`, el fin del intervalo, `Xf`, y la cantidad de muestras a generar, `n`.
+Desarrollar un programa que genere muestras aleatorias en un intervalo dado por el usuario. El programa debe recibir como argumentos el inicio del intervalo, `Xi`, el fin del intervalo, `Xf`, y la cantidad de muestras a generar, `n`.
 
 **Ejemplo:**
 ```
@@ -91,7 +91,7 @@ $ ./sampler -3 2.65 10
 ```
 
 ## Ejercicio 8.9
-Desarrollá un programa que reciba como argumento un string e imprima por pantalla el string cifrado utilizando el algoritmo [ROT13](https://es.wikipedia.org/wiki/ROT13).
+Desarrollar un programa que reciba como argumento un string e imprima por pantalla el string cifrado utilizando el [cifrado ROT13](https://es.wikipedia.org/wiki/ROT13).
 
 **Ejemplo:**
 ```
@@ -100,7 +100,7 @@ ubyn
 ```
 
 ## Ejercicio 8.10
-En este ejercicio, la función de cada argumento estará dada por las banderas (`flags`) en la línea de comandos. Desarrollá una versión modificada del programa del ejercicio 8.8 para que reciba los argumentos utilizando las siguientes banderas:
+En este ejercicio, la función de cada argumento estará dada por las banderas (`flags`) en la línea de comandos. Desarrollar una versión modificada del programa del ejercicio 8.8 para que reciba los argumentos utilizando las siguientes banderas:
 
 - **-a** comienzo del intervalo
 - **-b** fin del intervalo
